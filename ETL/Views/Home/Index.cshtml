@@ -1,2 +1,922 @@
 ﻿@model ETL.Models.DataModel
 @using static ETL.Models.DataModel
+
+
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    @*<link href="~/css/bootstrap.css" rel="stylesheet" />*@
+    <!--<link href="css/pe-icon-7-stroke.css" rel="stylesheet" />-->
+    <link href="~/css/ct-navbar.css" rel="stylesheet" />
+    <!--<link href="css/modelpopup.css" rel="stylesheet" />-->
+    <!--     Font Awesome     -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--<link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>-->
+    <!--<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link href="~/css/jquery.flowchart.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/terminalstyle.css" rel="stylesheet" />
+    <link href="~/css/customjqueryflowchart.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../paperassets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../paperassets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>ETL</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Bootstrap core CSS     -->
+    <link href="../../paperassets/css/bootstrap.min.css" rel="stylesheet" />
+    <!--  Paper Dashboard core CSS    -->
+    <link href="../../paperassets/css/paper-dashboard.css" rel="stylesheet" />
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="../../paperassets/css/demo.css" rel="stylesheet" />
+
+    <!--  Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="../../paperassets/css/themify-icons.css" rel="stylesheet">
+    <link href="~/css/customjqueryflowchart.css" rel="stylesheet" />
+    <style>
+        /* a container with flex-direction column */
+        .main-container {
+            height: 55vh; /* or position:absolute; height:100%; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* an arbitrary container of fixed height */
+        .fixed-container {
+            height: 100px;
+            padding: 20px;
+            background-color: #0B5AB0;
+            color: black;
+        }
+
+        /* this is the flex container that will take the rest of the height */
+        .content-wrapper {
+            display: flex;
+            flex: 1;
+            min-height: 0px; /* IMPORTANT: you need this for non-chrome browsers */
+        }
+
+        /* the container for our overflowed content */
+        .overflow-container {
+            flex: 1;
+            overflow: auto;
+        }
+
+        /* the overflow content itself */
+        .overflow-content {
+            height: 2000px;
+            width: 20000px;
+            color: black;
+            background-color: #ddd;
+            padding: 20px;
+        }
+
+        code {
+            font-weight: bold;
+            color: darkred;
+            margin: 0 5px;
+        }
+        
+        .center-div {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+        }
+
+        .spinner {
+            position: fixed;
+            z-index: 999;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: Black;
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+            -moz-opacity: 0.8;
+        }
+
+        .loader {
+            margin: auto;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #15a0ec;
+            border-bottom: 16px solid #15a0ec;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        .inner-div {
+            background-color: white;
+            border-radius: 15px;
+            margin: auto;
+            padding: 2%;
+            width: 150px;
+        }
+
+        @@-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @@keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-background-color="brown" data-active-color="danger">
+            <!--
+                Tip 1: you can change the color of the sidebar's background using: data-background-color="white | brown"
+                Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+            -->
+            <div class="logo">
+                <a href="#" class="simple-text logo-mini">
+                    CT
+                </a>
+                <a href="#" class="simple-text logo-normal">
+                    ETL
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <div class="panel panel-info" style="color: #ffffff;
+    background-color: #66615b;
+    border-color: #000000;">
+                    <div class="panel-heading" style="color: #fffffe;
+    background-color: #000000;
+    border-color: #000000;">
+                        Project Tree
+                    </div>
+                    <div class="panel-body" style="border-color: black;BORDER-STYLE: solid;">
+                        <div id="html1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-panel">
+            <nav class="navbar navbar-default ">
+
+                <ul class="nav navbar-nav">
+                    <li class="">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            <p>New</p>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a data-toggle="modal" data-target="#projectWindow" href="#">New Project</a></li>
+                            <li><a data-toggle="modal" data-target="#mappingWindow" href="#"> New Mapping</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+                @using (Html.BeginForm("NewModel", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <p>New</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <button type="submit">Start a New Flow</button>
+                            </ul>
+                        </li>
+
+                    </ul>
+                }
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#" id="save">
+                            <i class="fa fa-save"></i>
+                            <p>Save</p>
+                        </a>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-play-circle"></i>
+                            <p>Project Execute</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <ul class="nav navbar-nav">
+                    <li class="">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-play"></i>
+                            <p>Execute Job</p>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a data-toggle="modal" data-target="#sqlserverWindow" href="#">Settings</a></li>
+                            <li><a id="executeJob" href="#">Execute</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#" id="validate">Validate</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+                            <p>Excel</p>  <p>@Model.DbConnection.msg</p>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            @using (Html.BeginForm("ExcelConnection", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "form" }))
+                            {
+                                <li><a href="#">Browse Excel File in 'Directory D'</a></li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="">Email address</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="File name">
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="text-center"><button type="button" class="btn btn-primary" id="excelBtn">Process</button></li>
+                            }
+                        </ul>
+
+                    </li>
+                    <li class="dropdown" id="sqlServerLi">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-database"></i>
+                            <p>SQL Server</p>
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <div style="width: 600px " class="text-center !important">
+                                @using (Html.BeginForm("SqlServerConnection", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "sqlServerForm" }))
+                                {
+
+                                    <div class="form-group row cen">
+                                        <label for="sqlServerServerName" class="col-md-4 col-form-label form-control-label">Server Name</label>
+                                        <div class="col-md-7">
+                                            <input class="form-control" type="text" placeholder="Server Name" id="sqlServerServerName">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row pl-1">
+                                        <label for="sqlServerDatabaseName" class="col-md-4 col-form-label form-control-label">Database Name</label>
+                                        <div class="col-md-7">
+                                            <input class="form-control" type="text" placeholder="Database Name" id="sqlServerDatabaseName">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="sqlServerUserName" class="col-md-4 col-form-label form-control-label">User Name</label>
+                                        <div class="col-md-7">
+                                            <input class="form-control" type="text" placeholder="User Name" id="sqlServerUserName">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="sqlServerPassword" class="col-md-4 col-form-label form-control-label">Password</label>
+                                        <div class="col-md-7">
+                                            <input class="form-control" type="password" placeholder="Password" id="sqlServerPassword">
+                                        </div>
+                                    </div>
+
+                                    <li class="text-center"><button type="button" class="close" data-dismiss="modal" id="sqlBtn">Process</button></li>
+                                    <li class="divider"></li>
+
+
+                                }
+                            </div>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <ul class="nav navbar-nav">
+
+                    <li id="create_source">
+                        <a href="#">
+                            <i class="fa fa-connectdevelop"></i>
+
+                            <p>Source</p>
+                        </a>
+                    </li>
+                    <li id="create_aggregator">
+                        <a href="#">
+                            <i class="fa fa-cogs"></i>
+                            <p>Aggregator</p>
+                        </a>
+                    </li>
+                    <li id="create_joiner">
+                        <a href="#">
+                            <i class="fa fa-object-group"></i>
+                            <p>Joiner</p>
+                        </a>
+                    </li>
+                    <li id="create_filter">
+                        <a href="#">
+                            <i class="fa fa-object-group"></i>
+                            <p>Filter</p>
+                        </a>
+                    </li>
+                    <li id="create_expression">
+                        <a href="#">
+                            <i class="fa fa-cogs"></i>
+                            <p>Expression f(x)</p>
+                        </a>
+                    </li>
+                    <li id="create_target">
+                        <a href="#">
+                            <i class="fa fa-linode"></i>
+                            <p>Target</p>
+                        </a>
+                    </li>
+                    <li id="delete_selected_button">
+                        <a href="#">
+                            <i class="fa fa-trash"></i>
+                            <p>Delete Selected Operator</p>
+                        </a>
+                    </li>
+                    <li id="properties_selected_button">
+                        <a href="#">
+                            <i class="fa fa-info-circle"></i>                            <p>Operator Properties</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="spinner" style="display:none">
+                    <div class="center-div">
+                        <div class="inner-div">
+                            <div class="loader"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+            <div class="content">
+                <div class="container-fluid">
+
+                    </br>
+                    @*<div class="window">
+                            <div id="example1" class="terminal" style="height: 1210px;overflow: scroll;">
+                            </div>
+                        </div>*@
+                    <div class="main-container">
+                        <div class="content-wrapper">
+                            <!-- ...more content here -->
+                            <div class="overflow-container">
+                                <!-- ...and more content here -->
+                                <div id="example" class="overflow-content">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="window">
+                        <div id="log_div" class="terminal overflow-auto" style="height: 210px;overflow: scroll;">
+                            <p class="command">Tool Logs:</p>
+                            <p class="log">
+                                <span id="logsData">
+
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                @*<div class="container-fluid">
+                        <nav class="pull-left">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Creative Tim
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://blog.creative-tim.com">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#/license">
+                                        Licenses
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="copyright pull-right">
+                            &copy;
+                            <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Creative Tim</a>
+                        </div>
+                    </div>*@
+            </footer>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="modal fade" id="sqlserverWindow">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">SQL SERVER</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-header">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Server Name" />
+                                <input type="password" class="form-control" placeholder="Login" />
+                                <input type="password" class="form-control" placeholder="Password" />
+                                <button type="button" class="close" data-dismiss="modal">Create</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- footer -->
+                    s
+
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="projectWindow">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">New Project</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-header">
+                        <form role="form">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Project Name" id="new_project_name" />
+                                <button type="button" id="new_project_create" class="close" data-dismiss="modal">Create</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- footer -->
+
+
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="mappingWindow">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">New Mapping</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-header">
+                        <form role="form">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Mapping Name" id="new_mapping_name" />
+                                <button id="new_mapping_create" type="button" class="close" data-dismiss="modal">Create</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- footer -->
+
+
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="excelWindow">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Status</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-header">
+                        <form role="form">
+                            <div class="form-group">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- footer -->
+
+
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="sourcewindow" role="dialog">
+            <div class="modal-dialog">
+                @Html.Hidden("SourceOutputFlags")
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="modal-title">Source</h3>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="text-center">Table1</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="connectionList">Connections</label>
+                                <select id="connectionList"></select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="sourceTableList">Table List</label>
+                                <select id="sourceTableList"></select>
+                            </div>
+                        </div>
+                        <table class="table table-bordered" id="sourceTable">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Columns</th>
+                                    <th scope="col">Output</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="sourceTableBody"></tbody>
+                        </table>
+                        <div class="form-group">
+                            <input type="button" class="btn btn-warning btn-sm pull-right" value="Reset">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                        <button type="button" id="srcModelSave" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="modal fade" id="targetwindow" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="modal-title">Target</h3>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="text-center" id="target-table">Table1</h5>
+                        <table class="table table-bordered">
+                            <thead id="target-table-header"></thead>
+                            <tbody id="target-table-body"></tbody>
+                        </table>
+                        <div class="form-group">
+                            <input type="button" class="btn btn-warning btn-sm pull-right" value="Reset">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        <div class="modal fade" id="aggregatorwindow" role="dialog">
+            <div class="modal-dialog">
+
+                @using (Html.BeginForm("AggregatorSaveChanges", "Home", FormMethod.Post, new { @id = "agrMForm", enctype = "multipart/form-data" }))
+                {
+
+                    @Html.Hidden("AgrOutputFlags", Model.SourceOutputFlags)
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 class="modal-title">Aggregator</h3>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="text-center" id="aggregator-table-name">Table1</h5>
+                            <table class="table table-bordered" id="aggregator-table">
+                                <thead>
+                                    <tr>
+
+                                        <th scope="col">Output Columns</th>
+                                        <th scope="col">GroupBy</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="aggregator-table-body"></tbody>
+                            </table>
+                            <div class="form-group">
+                                <input type="button" class="btn btn-warning btn-sm pull-right" value="Reset">
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                            <button type="button" id="agrModelForm" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                }
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+        <div class="modal fade" id="filterwindow" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                @using (Html.BeginForm("FilterSaveChanges", "Home", FormMethod.Post, new { @id = "filMForm", enctype = "multipart/form-data" }))
+                {
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 class="modal-title">Filter</h3>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered" id="filter-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Select Column</th>
+                                        <th scope="col">Self Column Check</th>
+                                        <th scope="col">Select Operator</th>
+                                        <th scope="col">Value</th>
+                                        <th scope="col">Select Condition</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="filter-table-body">
+                                    @*<tr>
+                                            <td>
+                                                <select id="filter-select-column-0" class="form-control"></select>
+                                            </td>
+                                            <td class="text-center filter-self-column">
+                                                <input id="filter-self-column-0" type="checkbox" class="" data-recId="0" />
+                                            </td>
+                                            <td>
+                                                <select id="filter-select-operator-0" class="form-control"></select>
+                                            </td>
+                                            <td class="filter-column-value-option-text-0" id="filter-column-value-option-text-0">
+                                                <input id="filter-column-value-text-0" type="text" class="form-control" />
+                                            </td>
+                                            <td class="filter-column-value-option-dd-0 hide" id="filter-column-value-option-dd-0">
+                                                <select id="filter-column-value-dd-0" class="form-control"></select>
+                                            </td>
+                                            <td>
+                                                <select id="filter-select-condition-0" class="form-control"></select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <select id="filter-select-column-1" class="form-control"></select>
+                                            </td>
+                                            <td class="text-center filter-self-column">
+                                                <input id="filter-self-column-1" type="checkbox" class="" data-recId="1" />
+                                            </td>
+                                            <td>
+                                                <select id="filter-select-operator-1" class="form-control"></select>
+                                            </td>
+                                            <td class="filter-column-value-option-text-1" id="filter-column-value-option-text-1">
+                                                <input id="filter-column-value-text-1" type="text" class="form-control" />
+                                            </td>
+                                            <td class="filter-column-value-option-dd-1 hide" id="filter-column-value-option-dd-1">
+                                                <select id="filter-column-value-dd-1" class="form-control"></select>
+                                            </td>
+                                            <td>
+                                                <select id="filter-select-condition-1" class="form-control"></select>
+                                            </td>
+                                        </tr>*@
+                                </tbody>
+                            </table>
+                            <div class="form-group">
+                                <input id="filter-add-row" type="button" class="btn btn-warning btn-sm pull-right" value="Add Filter">
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="button" class="btn btn-warning btn-sm pull-right" value="Reset">
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                            <button type="button" id="filterModelForm" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                }
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+        <div class="modal fade" id="expressionwindow" role="dialog">
+            <div class="modal-dialog">
+                @Html.Hidden("ExpToDataType", Model.SourceOutputFlags)
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="modal-title">Expression Transformation</h3>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="text-center" id="expression-table-name">Table1</h5>
+                        <table class="table table-bordered" id="expression-table">
+                            <thead>
+                                <tr>
+
+                                    <th scope="col">Output Columns</th>
+                                    <th scope="col">New Data Type</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="expression-table-body"></tbody>
+                        </table>
+                        <div class="form-group">
+                            <input type="button" class="btn btn-warning btn-sm pull-right" value="Reset">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                        <button type="button" id="expModelForm" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+        <div class="modal fade" id="joinerwindow" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="modal-title">Joiner</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="panel with-nav-tabs panel-primary">
+                            <div class="panel-heading">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#tab1primary" data-toggle="tab">INPUT</a></li>
+                                    <li><a href="#tab2primary" data-toggle="tab">PROPERTIES</a></li>
+
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="tab1primary">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h5 class="text-center" id="join-source-1">Source Table 1</h5>
+                                                <table class="table table-bordered" id="join-table-1">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Columns</th>
+                                                            <th scope="col">Output</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="join-source-1-tb"></tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5 class="text-center" id="join-source-2">Source Table 2</h5>
+                                                <table class="table table-bordered" id="join-table-2">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Columns</th>
+                                                            <th scope="col">Output</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="join-source-2-tb"></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab2primary">
+
+                                        <div class="row">
+                                            <div class="form-group col-md-8">
+                                                <label for="select-source-1-col" class="form-control-label">Source 1</label>
+                                                <select id="select-source-1-col" class="form-control"></select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-md-8">
+                                                <label for="select-join-type" class="form-control-label">Join Type</label>
+                                                <select id="select-join-type" class="form-control">
+                                                    <option>--Select Join Type--</option>
+                                                    <option value="Left Join">Left Join</option>
+                                                    <option value="Inner Join">Inner Join</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-md-8">
+                                                <label for="select-source-2-col" class="form-control-label">Source 2</label>
+                                                <select id="select-source-2-col" class="form-control"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                        <button type="button" id="joinerModelSave" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+    </div>
+</body>
+
+<!--   Core JS Files. Extra: TouchPunch for touch library inside jquery-ui.min.js   -->
+<!-- partial -->
+@*<script src="~/js/ct-navbar.js"></script>*@
+<script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+@*<script src="../../paperassets/js/jquery-3.1.1.min.js" type="text/javascript"></script>*@
+@*<script src="../../paperassets/js/jquery-ui.min.js" type="text/javascript"></script>*@
+<script src="../../paperassets/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+@*<script src="../../paperassets/js/bootstrap.min.js" type="text/javascript"></script>*@
+<!--  Forms Validations Plugin -->
+<script src="../../paperassets/js/jquery.validate.min.js"></script>
+<!-- Promise Library for SweetAlert2 working on IE -->
+<script src="../../paperassets/js/es6-promise-auto.min.js"></script>
+<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+<script src="../../paperassets/js/moment.min.js"></script>
+<!--  Date Time Picker Plugin is included in this js file -->
+<script src="../../paperassets/js/bootstrap-datetimepicker.js"></script>
+<!--  Select Picker Plugin -->
+<script src="../../paperassets/js/bootstrap-selectpicker.js"></script>
+<!--  Switch and Tags Input Plugins -->
+<script src="../../paperassets/js/bootstrap-switch-tags.js"></script>
+<!-- Circle Percentage-chart -->
+<script src="../../paperassets/js/jquery.easypiechart.min.js"></script>
+<!--  Charts Plugin -->
+<script src="../../paperassets/js/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="../../paperassets/js/bootstrap-notify.js"></script>
+<!-- Sweet Alert 2 plugin -->
+<script src="../../paperassets/js/sweetalert2.js"></script>
+<!-- Vector Map plugin -->
+<script src="../../paperassets/js/jquery-jvectormap.js"></script>
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!-- Wizard Plugin    -->
+<script src="../../paperassets/js/jquery.bootstrap.wizard.min.js"></script>
+<!--  Bootstrap Table Plugin    -->
+<script src="../../paperassets/js/bootstrap-table.js"></script>
+<!--  Plugin for DataTables.net  -->
+<script src="../../paperassets/js/jquery.datatables.js"></script>
+<!--  Full Calendar Plugin    -->
+<script src="../../paperassets/js/fullcalendar.min.js"></script>
+<!-- Paper Dashboard PRO Core javascript and methods for Demo purpose -->
+<script src="../../paperassets/js/paper-dashboard.js"></script>
+<!-- Paper Dashboard PRO DEMO methods, don't include it in your project! -->
+<script src="../../paperassets/js/demo.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        demo.initOverviewDashboard();
+        demo.initCirclePercentage();
+
+    });
+</script>
+
+<script src="~/lib/jquery/dist/jquery.flowchart.js"></script>
+<script src="~/js/customflowchart.js"></script>
+<script src="~/js/bootstrap.js" type="text/javascript"></script>
+<script src="~/js/terminalscript.js" type="text/javascript"></script>
+<script src="~/js/TransformationFilter.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js" type="text/javascript"></script>

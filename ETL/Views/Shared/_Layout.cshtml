@@ -13,291 +13,243 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!--<link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>-->
     <!--<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>-->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link href="~/css/jquery.flowchart.css" rel="stylesheet" type="text/css" />
-
-    <style>
-        /***
-        Bootstrap4 Card with Tabs by
-        ***/
-
-        body {
-            background-color: #f7f8f9;
-        }
-
-        .card {
-            background-color: #ffffff;
-            border: 1px solid #002233;
-            border: 1px solid rgba(0, 34, 51, 0.1);
-            box-shadow: 2px 4px 10px 0 #002233, 2px 4px 10px 0 #002233;
-            box-shadow: 2px 4px 10px 0 rgba(0, 34, 51, 0.05), 2px 4px 10px 0 rgba(0, 34, 51, 0.05);
-            border-radius: 0.15rem;
-        }
-
-        /* Tabs Card */
-
-        .tab-card {
-            border: 1px solid #eee;
-        }
-
-        .tab-card-header {
-            background: none;
-        }
-            /* Default mode */
-            .tab-card-header > .nav-tabs {
-                border: none;
-            }
-
-                .tab-card-header > .nav-tabs > li {
-                    margin-right: 2px;
-                }
-
-                    .tab-card-header > .nav-tabs > li > a {
-                        border: 0;
-                        border-bottom: 2px solid transparent;
-                        margin-right: 0;
-                        color: #737373;
-                        padding: 2px 15px;
-                    }
-
-                        .tab-card-header > .nav-tabs > li > a.show {
-                            border-bottom: 2px solid #007bff;
-                            color: #007bff;
-                        }
-
-                        .tab-card-header > .nav-tabs > li > a:hover {
-                            color: #007bff;
-                        }
-
-            .tab-card-header > .tab-content {
-                padding-bottom: 0;
-            }
-    </style>
-    <style>
-        body {
-            background-color: #fafafa;
-        }
-
-        .container {
-            margin: 150px auto;
-        }
-
-        .demo {
-            height: 300px;
-            margin-bottom: 10px;
-        }
-    </style>
+    <link href="~/css/terminalstyle.css" rel="stylesheet" />
+    <link href="~/css/customjqueryflowchart.css" rel="stylesheet" />
+    
 
 </head>
-
 <body>
-    <div id="navbar-full">
 
-        <!--
-        navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
-        -->
-        <nav class="navbar navbar-ct-blue navbar-fixed-top navbar" role="navigation">
+    <nav class="navbar navbar-ct-blue navbar-fixed-top navbar" role="navigation">
 
-            <div class="container-fluid">
-                <!--<div class="col-sm-3">-->
-                <!--<div class="col-sm-4">
-                <div class="row">-->
 
-                @using (Html.BeginForm("NewModel", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                {
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                <p>New</p>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <button type="submit">Start a New Flow</button>
-                            </ul>
-                        </li>
+        <ul class="nav navbar-nav">
+            <li class="">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <p>New</p>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a data-toggle="modal" data-target="#projectWindow" href="#">New Project</a></li>
+                    <li><a data-toggle="modal" data-target="#mappingWindow" href="#"> New Mapping</a></li>
 
+                </ul>
+            </li>
+        </ul>
+        @using (Html.BeginForm("NewModel", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        <p>New</p>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <button type="submit">Start a New Flow</button>
                     </ul>
-                }
-                <!--</div>-->
-                <!--<div class="row">-->
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-save"></i>
-                            <p>Save</p>
-                        </a>
-                    </li>
+                </li>
 
+            </ul>
+        }
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#" id="save">
+                    <i class="fa fa-save"></i>
+                    <p>Save</p>
+                </a>
+            </li>
+
+        </ul>
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Project Execute</p>
+                </a>
+            </li>
+
+        </ul>
+
+
+        <ul class="nav navbar-nav">
+            <li class="">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-play"></i>
+                    <p>Execute Job</p>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a data-toggle="modal" data-target="#sqlserverWindow" href="#">Settings</a></li>
+                    <li><a id="executeJob" href="#">Execute</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" id="validate">Validate</a></li>
                 </ul>
-                <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-sm-4">
-                <div id="row">-->
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-play-circle"></i>
-                            <p>Project Execute</p>
-                        </a>
-                    </li>
+            </li>
+        </ul>
 
-                </ul>
-                <!--</div>
-                </div>-->
-                <!--<div class="col-sm-4">
-                <div id="row">-->
-                
 
-                <ul class="nav navbar-nav">
-                    <li class="" >
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-play"></i>
-                            <p >Execute Job</p>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a data-toggle="modal" data-target="#sqlserverWindow" href="#">Settings</a></li>
-                            <li><a id="executeJob" href="#">Execute</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Inspect</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <!--</div>
-                </div>-->
-                <!--</div>-->
-                <!--<div class="col-sm-6">-->
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+                    <p>Excel</p>  <p>@Model.DbConnection.msg</p>
+                </a>
 
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-file-excel-o" aria-hidden="true"></i>
-                            <p>Excel</p>  <p>@Model.DbConnection.msg</p>
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            @using (Html.BeginForm("ExcelConnection", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "form" }))
-                            {
-                                <li><a href="#">Browse Excel File in 'Directory D'</a></li>
-                                <li>
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="">Email address</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="File name">
-                                    </div>
-                                    @*<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                        @Html.Label("File Name")
-                                        @Html.TextBoxFor(model => model.DbConnection.filename, new { type = "string" })
-                                        @Html.ValidationMessageFor(model => model.DbConnection.filename)*@
-                                </li>
-                                <li class="divider"></li>
-                                <li class="text-center"><button type="button" class="btn btn-primary" id="excelBtn">Process</button></li>
-                            }
-                        </ul>
-
-                    </li>
-                    <li class="dropdown" id="sqlServerLi">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-database"></i>
-                            <p>SQL Server</p>
-                        </a>
-                        <ul class="dropdown-menu " >
-                            <div style="width: 600px " class="text-center !important">
-                                <!-- data-toggle="modal" data-target="#sqlserverWindow" -->
-                                <li><a  href="#">Conect to Server</a></li>
-                                @using (Html.BeginForm("SqlServerConnection", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "sqlServerForm" }))
-                                {
-                                    
-                                    <div class="form-group row cen">
-                                        <label for="sqlServerServerName" class="col-md-4 col-form-label form-control-label">Server Name</label>
-                                        <div class="col-md-7">
-                                        <input class="form-control" type="text" placeholder="Server Name" id="sqlServerServerName">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row pl-1">
-                                        <label for="sqlServerDatabaseName" class="col-md-4 col-form-label form-control-label">Database Name</label>
-                                        <div class="col-md-7">
-                                        <input class="form-control" type="text" placeholder="Database Name" id="sqlServerDatabaseName">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="sqlServerUserName" class="col-md-4 col-form-label form-control-label">User Name</label>
-                                        <div class="col-md-7">
-                                        <input class="form-control" type="text" placeholder="User Name" id="sqlServerUserName">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="sqlServerPassword" class="col-md-4 col-form-label form-control-label">Password</label>
-                                        <div class="col-md-7">
-                                        <input class="form-control" type="password" placeholder="Password" id="sqlServerPassword">
-                                        </div>
-                                    </div>
-                                    
-                                    <li class="text-center"><button type="button" class="btn btn-primary" id="sqlBtn">Process</button></li>
-                                    // <li><a id="sqlBtn" href="#" class="btn">Process</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Properties</a></li>
-                                }
+                <ul class="dropdown-menu">
+                    @using (Html.BeginForm("ExcelConnection", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "form" }))
+                    {
+                        <li><a href="#">Browse Excel File in 'Directory D'</a></li>
+                        <li>
+                            <div class="form-group">
+                                <label class="form-control-label" for="">Email address</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="File name">
                             </div>
-                        </ul>
-                    </li>
-
+                        </li>
+                        <li class="divider"></li>
+                        <li class="text-center"><button type="button" class="btn btn-primary" id="excelBtn">Process</button></li>
+                    }
                 </ul>
-                <!--</div>
-                <div class="col-sm-3 ">-->
 
-                <ul class="nav navbar-nav">
+            </li>
+            <li class="dropdown" id="sqlServerLi">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-database"></i>
+                    <p>SQL Server</p>
+                </a>
+                <ul class="dropdown-menu ">
+                    <div style="width: 600px " class="text-center !important">
+                        @using (Html.BeginForm("SqlServerConnection", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "sqlServerForm" }))
+                        {
 
-                    <li id="create_source">
-                        <a href="#">
-                            <i class="fa fa-connectdevelop"></i>
+                            <div class="form-group row cen">
+                                <label for="sqlServerServerName" class="col-md-4 col-form-label form-control-label">Server Name</label>
+                                <div class="col-md-7">
+                                    <input class="form-control" type="text" placeholder="Server Name" id="sqlServerServerName">
+                                </div>
+                            </div>
 
-                            <p>Source</p>
-                        </a>
-                    </li>
-                    <li id="create_aggregator">
-                        <a href="#">
-                            <i class="fa fa-cogs"></i>
-                            <p>Aggregator</p>
-                        </a>
-                    </li>
-                    <li id="create_joiner">
-                        <a href="#">
-                            <i class="fa fa-object-group"></i>
-                            <p>Joiner</p>
-                        </a>
-                    </li>
-                    <li id="create_target">
-                        <a href="#">
-                            <i class="fa fa-linode"></i>
-                            <p>Target</p>
-                        </a>
-                    </li>
-                    <li id="delete_selected_button">
-                        <a href="#">
-                            <i class="fa fa-trash"></i>
-                            <p>Delete Selected Operator</p>
-                        </a>
-                    </li>
-                    <li id="properties_selected_button">
-                        <a href="#">
-                            <i class="fa fa-info-circle"></i>                            <p>Operator Properties</p>
-                        </a>
-                    </li>
+                            <div class="form-group row pl-1">
+                                <label for="sqlServerDatabaseName" class="col-md-4 col-form-label form-control-label">Database Name</label>
+                                <div class="col-md-7">
+                                    <input class="form-control" type="text" placeholder="Database Name" id="sqlServerDatabaseName">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="sqlServerUserName" class="col-md-4 col-form-label form-control-label">User Name</label>
+                                <div class="col-md-7">
+                                    <input class="form-control" type="text" placeholder="User Name" id="sqlServerUserName">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="sqlServerPassword" class="col-md-4 col-form-label form-control-label">Password</label>
+                                <div class="col-md-7">
+                                    <input class="form-control" type="password" placeholder="Password" id="sqlServerPassword">
+                                </div>
+                            </div>
+
+                            <li class="text-center"><button type="button" class="close" data-dismiss="modal" id="sqlBtn">Process</button></li>
+                            <li class="divider"></li>
+
+
+                        }
+                    </div>
                 </ul>
-                <!--</div>
-                </div>-->
+            </li>
+
+        </ul>
+
+        <ul class="nav navbar-nav">
+
+            <li id="create_source">
+                <a href="#">
+                    <i class="fa fa-connectdevelop"></i>
+
+                    <p>Source</p>
+                </a>
+            </li>
+            <li id="create_aggregator">
+                <a href="#">
+                    <i class="fa fa-cogs"></i>
+                    <p>Aggregator</p>
+                </a>
+            </li>
+            <li id="create_joiner">
+                <a href="#">
+                    <i class="fa fa-object-group"></i>
+                    <p>Joiner</p>
+                </a>
+            </li>
+            <li id="create_filter">
+                <a href="#">
+                    <i class="fa fa-object-group"></i>
+                    <p>Filter</p>
+                </a>
+            </li>
+            <li id="create_target">
+                <a href="#">
+                    <i class="fa fa-linode"></i>
+                    <p>Target</p>
+                </a>
+            </li>
+            <li id="delete_selected_button">
+                <a href="#">
+                    <i class="fa fa-trash"></i>
+                    <p>Delete Selected Operator</p>
+                </a>
+            </li>
+            <li id="properties_selected_button">
+                <a href="#">
+                    <i class="fa fa-info-circle"></i>                            <p>Operator Properties</p>
+                </a>
+            </li>
+        </ul>
+
+        <div class="spinner" style="display:none">
+            <div class="center-div">
+                <div class="inner-div">
+                    <div class="loader"></div>
+                </div>
             </div>
+        </div>
 
-        </nav>
-    </div><!-- /.container-fluid -->
-
+    </nav>
     @RenderBody()
-    <div class="container">
-        <div class="demo" id="example"></div>
-        <!--<button class="btn btn-primary" id="create_operator">Create A New Operator</button>-->
-        <!--<button class="btn btn-danger" id="delete_selected_button">Delete Selected Operator</button>-->
+    <div class="container-fluid" style="    padding-top: 112px;">
+        <div class="row">
+            @*<div class="col-md-12">
+            *@
+            <div class="col-md-3">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Project Tree
+                    </div>
+                    <div class="panel-body">
+                        <div id="html1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9" style="    background-color: #009688;">
+                <div class="container">
+                    <div class="demo" id="example"></div>
+                    <!--<button class="btn btn-primary" id="create_operator">Create A New Operator</button>-->
+                    <!--<button class="btn btn-danger" id="delete_selected_button">Delete Selected Operator</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="window">
+        <div id="log_div" class="terminal overflow-auto" style="height: 210px;
+  overflow: scroll;">
+            <p class="command">Tool Logs:</p>
+            <p class="log">
+                <span id="logsData">
+
+                </span>
+            </p>
+        </div>
     </div>
     <div class="container">
         <div class="modal fade" id="sqlserverWindow">
@@ -321,6 +273,54 @@
                     </div>
                     <!-- footer -->
                     s
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="projectWindow">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">New Project</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-header">
+                        <form role="form">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Project Name" id="new_project_name" />
+                                <button type="button" id="new_project_create" class="close" data-dismiss="modal">Create</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- footer -->
+
+
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="mappingWindow">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">New Mapping</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-header">
+                        <form role="form">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Mapping Name" id="new_mapping_name" />
+                                <button id="new_mapping_create" type="button" class="close" data-dismiss="modal">Create</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- footer -->
+
 
                 </div>
             </div>
@@ -443,7 +443,7 @@
                             <table class="table table-bordered" id="aggregator-table">
                                 <thead>
                                     <tr>
-                                        
+
                                         <th scope="col">Output Columns</th>
                                         <th scope="col">GroupBy</th>
 
@@ -459,6 +459,91 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
                             <button type="button" id="agrModelForm" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                }
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <div class="modal fade" id="filterwindow" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                @using (Html.BeginForm("FilterSaveChanges", "Home", FormMethod.Post, new { @id = "filMForm", enctype = "multipart/form-data" }))
+                {
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 class="modal-title">Filter</h3>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered" id="filter-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Select Column</th>
+                                        <th scope="col">Self Column Check</th>
+                                        <th scope="col">Select Operator</th>
+                                        <th scope="col">Value</th>
+                                        <th scope="col">Select Condition</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="filter-table-body">
+                                    @*
+                                    <tr>
+                                        <td>
+                                            <select id="filter-select-column-0" class="form-control"></select>
+                                        </td>
+                                        <td class="text-center filter-self-column">
+                                            <input id="filter-self-column-0" type="checkbox" class="" data-recId="0" />
+                                        </td>
+                                        <td>
+                                            <select id="filter-select-operator-0" class="form-control"></select>
+                                        </td>
+                                        <td class="filter-column-value-option-text-0" id="filter-column-value-option-text-0">
+                                            <input id="filter-column-value-text-0" type="text" class="form-control" />
+                                        </td>
+                                        <td class="filter-column-value-option-dd-0 hide" id="filter-column-value-option-dd-0">
+                                            <select id="filter-column-value-dd-0" class="form-control"></select>
+                                        </td>
+                                        <td>
+                                            <select id="filter-select-condition-0" class="form-control"></select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select id="filter-select-column-1" class="form-control"></select>
+                                        </td>
+                                        <td class="text-center filter-self-column">
+                                            <input id="filter-self-column-1" type="checkbox" class="" data-recId="1" />
+                                        </td>
+                                        <td>
+                                            <select id="filter-select-operator-1" class="form-control"></select>
+                                        </td>
+                                        <td class="filter-column-value-option-text-1" id="filter-column-value-option-text-1">
+                                            <input id="filter-column-value-text-1" type="text" class="form-control" />
+                                        </td>
+                                        <td class="filter-column-value-option-dd-1 hide" id="filter-column-value-option-dd-1">
+                                            <select id="filter-column-value-dd-1" class="form-control"></select>
+                                        </td>
+                                        <td>
+                                            <select id="filter-select-condition-1" class="form-control"></select>
+                                        </td>
+                                    </tr>*@
+                                </tbody>
+                            </table>
+                            <div class="form-group">
+                                <input id="filter-add-row" type="button" class="btn btn-warning btn-sm pull-right" value="Add Filter">
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="button" class="btn btn-warning btn-sm pull-right" value="Reset">
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                            <button type="button" id="filterModelForm" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
                         </div>
 
                     </div>
@@ -558,807 +643,119 @@
 
 
     </div>
-
+    <br />
+    <!-- partial -->
     <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.flowchart.js"></script>
+    <script src="~/js/customflowchart.js"></script>
+    <script src="~/js/bootstrap.js" type="text/javascript"></script>
+    <script src="~/js/terminalscript.js" type="text/javascript"></script>
+    <script src="~/js/TransformationFilter.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js" type="text/javascript"></script>
+    @*
+    <script src="~/js/ct-navbar.js"></script>*@
 
-    <script type="text/javascript">
-
-        var activeContainerId = "";
-        var source_operatorI = 1;
-        var joiner_operatorI = 1;
-        var aggregator_operatorI = 1;
-        var target_operatorI = 1;
-        //----------------Source Model code-----------
-        $('#srcModelSave').on('click', function () {
-            var x = $('#SourceOutputFlags').val();
-            var model = {
-                ConnectionName: $('#connectionList').val(),
-                SourceOutputFlags: $('#SourceOutputFlags').val(),
-                TableName: $('#sourceTableList').val(),
-                SourceName: activeContainerId
-
-            }
-
-            $.ajax({
-                url: "Home/SourceSaveChanges",
-                type: "Post",
-                dataType: "json",
-                contentType: "application/json",
-                data: JSON.stringify(model), //if you need to post Model data, use this
-                success: function (result) {
-                    $("#partial").html(result);
-                }
-            });
-        });
-        //---------------Source Table Checkbox Handling--------------
-        $('#sourceTable').on('change',
-            'input[type="checkbox"]',
-            function (e) {
-                var chkVal = $(this).prop('value');
-                if (chkVal === 'true') {
-                    $(this).prop('value', 'false').removeAttr('checked');
-                } else {
-                    $(this).prop('value', 'true').prop('checked', 'checked');
-                    //$('#sourceTable').find("[data-id= 0]").prop('value', 'true').prop('checked', 'checked');
-                }
-                updateSourceOutputFlag();
-            });
-
-        function updateSourceOutputFlag() {
-            var checkedAssetIds = [];
-            $('#sourceTable input[type="checkbox"]').each(function (idx, val) {
-                if ($(this).prop('checked')) {
-                    checkedAssetIds.push($(this).data('id'));
-                }
-            });
-            $('#SourceOutputFlags').val(checkedAssetIds);
-
-        }
-        //---------------Source Table Checkbox Handling--------------
-        function getTableHeader(connectionName, tableName) {
-
-
-            $.getJSON('/home/GetTableHeader',
-                { connName: connectionName, tableName: tableName, containerId: activeContainerId },
-                function (data) {
-                    if ($('#connectionList').val() !== '' && $('#sourceTableList').val() !== '') {
-                        $('#sourceTableBody').empty();
-                        var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
-                        //alert(data);
-                        var trHTML = '';
-                        for (var i = 0; i < jsonData.length; i++) //The json object has lenght
-                        {
-                            var isChecked = ' value = "false"';
-                            if (jsonData[i].OutputFlag === true) {
-                                isChecked = ' value = "true" checked="checked"';
-                            }
-
-                            trHTML += '<tr>' +
-                                '<td>' +
-                                jsonData[i].ColumnName +
-                                '</td>' +
-                                '<td> <div class="custom-control custom-checkbox"> ' +
-                                '<input type="checkbox" class="checkbox sourceRow" id="' +
-                                jsonData[i].ColumnId +
-                                '"  data-id = "' +
-                                jsonData[i].ColumnId +
-                                '" ' + isChecked + '>' +
-                                '</div> </td> </tr>';
-                        }
-                        $('#sourceTableBody').append(trHTML);
-                    }
-
-
-                }).fail(function (jqXHR, textStatus, errorThrown) {
-                    alert('Error getting tableLists!');
-                });
-        }
-
-        function getTables(connName, selectedTableName) {
-            console.log('Get Table COnnection Calling');
-            console.log(selectedTableName);
-            $.getJSON('/home/GetTable', { connName: connName }, function (data) {
-
-                $('#sourceTableList option').remove();
-                var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
-                $('#sourceTableList').append('<option>' + '--Select Table Name--' + '</option>');
-                if (jsonData !== null) {
-                    for (var i = 0; i < jsonData.length; i++) //The json object has lenght
-                    {
-                        var tabVal = jsonData[i];
-                        $('#sourceTableList').append('<option value=' +
-                            tabVal + '>' + tabVal + '</option>');
-                    }
-                }
-                //Set Selected Value
-                if (selectedTableName != '') {
-                    $('#sourceTableList').val(selectedTableName);
-                    //var ret = $('#sourceTableList').val()
-                    console.log(activeContainerId + '-' + selectedTableName);
-                }
-                return selectedTableName;
-
-            }).fail(function (jqXHR, textStatus, errorThrown) {
-                alert('Error getting source table names!');
-            });
-        }
-
-        function reOpenProperties(TableName) {
-            
-        }
-
-        function getConnection() {
-            $.getJSON('/home/GetConnections', { containerId: activeContainerId }, function (data) {
-                //-----------Set Source Window Config-----------
-				
-                $('#connectionList option').remove();
-                $('#sourceTableList option').remove();
-                $('#sourceTableBody').empty();
-                console.log('Connection Calling');
-                var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
-                var conn = jsonData.Connection;
-                var sourceModel = jsonData.SourceModel;
-                $('#connectionList').append('<option >' + '--Select Connection Name--' + '</option>');
-                for (var i = 0; i < conn.length; i++) //The json object has lenght
-                {
-                    //conn[i]; //You are in the current object
-                    $('#connectionList').append('<option value=' +
-                        conn[i] + '>' + conn[i] + '</option>');
-                }
-                //Set default value
-                $('#sourceTableList option').remove();
-                $('#sourceTableList').append('<option>' + '--Select Table Name--' + '</option>');
-                //-----------Set Source Window Config-----------
-                if (sourceModel.TableName != '') {
-                    $('#connectionList').val(sourceModel.ConnectionName);
-                    
-                    console.log(sourceModel.ConnectionName + '--' + sourceModel.TableName);
-                    let res = getTables($('#connectionList').val(), sourceModel.TableName);
-                    console.log(res);
-                      
-                    getTableHeader($('#connectionList').val(), sourceModel.TableName);
-                }
-            }).fail(function (jqXHR, textStatus, errorThrown) {
-                alert('Error getting categories!');
-            });
-        }
-
-        $('#connectionList').on('change',
-            function () {
-                $('#tableList option').empty();
-                $('#sourceTableBody').empty();
-                console.log('Connection List Change');
-                //--------------Table Names--------------
-                getTables($('#connectionList').val(), '');
-                //--------------Table Names--------------
-            });
-
-        $('#sourceTableList').on('change',
-            function () {
-                //$('#tableList option').empty();
-                //--------------Table Header--------------
-                getTableHeader($('#connectionList').val(), $('#sourceTableList').val());
-                //--------------Table Header--------------
-            });
-
-        $('#create_source').click(function () {
-            var operatorId = 'source_' + source_operatorI;
-            var operatorData = {
-                top: 60,
-                left: 500,
-                properties: {
-                    title: 'Source',
-                    inputs: {
-                        input_1: {
-                            label: 'Input 1',
-                        }
-                    },
-                    outputs: {
-                        output_1: {
-                            label: 'Output 1',
-                        }
-                    }
-                }
-            };
-            source_operatorI++;
-            $('#example').flowchart('createOperator', operatorId, operatorData);
-            var source = "source";
-            updateContainerVal(source, operatorId);
-        });
-        //----------------Source Model code-----------
-
-        //----------------Aggregator Model code-----------
-        $('#agrModelForm').on('click', function () {
-            //AggregatorSaveChanges
-            var x = $('#AgrOutputFlags').val();
-            var model = {
-                //ConnectionName: $('#connectionList').val(),
-                SourceOutputFlags: $('#AgrOutputFlags').val(),
-                //TableName: $('#sourceTableList').val(),
-                SourceName: activeContainerId
-
-            }
-
-            $.ajax({
-                url: "Home/AggregatorSaveChanges",
-                type: "Post",
-                dataType: "json",
-                contentType: "application/json",
-                data: JSON.stringify(model), //if you need to post Model data, use this
-                success: function (result) {
-                    $("#partial").html(result);
-                }
-            });
-        });
-        function aggregatorSettings(activeContainerId) {
-            $.getJSON('/home/AggregatorSettings', { containerId: activeContainerId }, function (data) {
-                var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
-                var sourceModel = jsonData.SourceModel;
-                var inputModel = jsonData.InputModel;
-                var isChecked = '';
-                $('#aggregator-table-name').empty();
-                $('#aggregator-table-name').text(sourceModel.ConnectionName + ' -> ' + sourceModel.TableName);
-
-                $('#aggregator-table-body').empty();
-                var trHTML = '';
-                var names = [];
-                for (var i = 0; i < inputModel.length; i++) //The json object has lenght
-                {
-                    isChecked = ' value = "false" disabled="disabled"';
-                    if (inputModel[i].OutputFlag === true) {
-                        isChecked = ' value = "true" checked="checked" ';
-                        
-                    }
-                    trHTML += '<tr>' + '<td >' +
-                        inputModel[i].ColumnName +
-                        '</td>' +
-                        '<td > <div class="custom-control custom-checkbox"> ' +
-                        '<input type="checkbox" class="checkbox" ' + isChecked + ' id = "' +
-                        inputModel[i].ColumnId +
-                        '"  data-id = "' +
-                        inputModel[i].ColumnId +
-                        '" >'
-                             ' </tr>';
-                    /*<!-- outCol = '<td >' +
-                        inputModel[i].ColumnName +
-                        '</td>' +
-                        '<td > <div class="custom-control custom-checkbox"> ' +
-                        '<input type="checkbox" class="checkbox" ' + isChecked + ' id = "' +
-                        inputModel[i].ColumnId +
-                        '"  data-id = "' +
-                        inputModel[i].ColumnId +
-                        '" >';
-                    names.push(outCol);
-                    outCol = ''; */
-
-                }
-                /*for (var i = 0, j = 0; i < sourceModel.InputModel.length; i++ , j++) //The json object has lenght
-                {
-                    isChecked = ' value = "false"';
-                    if (sourceModel.InputModel[i].OutputFlag === true) {
-                        isChecked = ' value = "true" checked="checked" ';
-                    }
-                    if (!j < names.length) {
-                        outCol = '';
-                    }
-                    trHTML += '<tr>' +
-                        '<td>' +
-                        sourceModel.InputModel[i].ColumnName +
-                        '</td>' +
-                        '<td> <div class="custom-control custom-checkbox"> ' +
-                        '<input type="checkbox" class="checkbox " disabled ' + isChecked + ' >' +
-                        '</div> </td> ' + names[j] + ' </tr>';
-                }*/
-                $('#aggregator-table-body').append(trHTML);
-
-
-            }).fail(function (jqXHR, textStatus, errorThrown) {
-                alert('Error getting aggregation settings!');
-            });
-        }
-
-        //---------------Aggregator Checkbox Handling--------------
-        $('#aggregator-table').on('change',
-            'input[type="checkbox"]',
-            function (e) {
-                var chkVal = $(this).prop('value');
-                //find("[data-id= 0]").prop('value');
-                if (chkVal === 'true') {
-                    $(this).prop('value', 'false').removeAttr('checked');
-                } else {
-                    $(this).prop('value', 'true').prop('checked', 'checked');
-                    //$('#sourceTable').find("[data-id= 0]").prop('value', 'true').prop('checked', 'checked');
-                }
-                updateAggregatorOutputFlag();
-            });
-
-        function updateAggregatorOutputFlag() {
-            var checkAggregatorIds = [];
-            $('#aggregator-table input[type="checkbox"]').each(function (idx, val) {
-                if ($('#myCheckbox').is(':disabled')) {
-
-                }
-                else if ($(this).prop('checked')) {
-                    checkAggregatorIds.push($(this).data('id'));
-                }
-            });
-
-            $('#AgrOutputFlags').val(checkAggregatorIds);
-            
-        }
-
-        //---------------Aggregator Checkbox Handling--------------
-        $('#create_aggregator').click(function () {
-            var operatorId = 'aggregator_' + aggregator_operatorI;
-            var operatorData = {
-                top: 60,
-                left: 500,
-                properties: {
-                    title: 'aggregator',
-                    inputs: {
-                        input_1: {
-                            label: 'Input 1',
-                        }
-                    },
-                    outputs: {
-                        output_1: {
-                            label: 'Output 1',
-                        }
-                    }
-                }
-            };
-
-            aggregator_operatorI++;
-
-            $('#example').flowchart('createOperator', operatorId, operatorData);
-            var source = "aggregator";
-            //alert(source + ' - ' + operatorId);
-            updateContainerVal(source, operatorId);
-        });
-        //----------------Aggregator Model code-----------
-
-        //----------------Join Model code-----------
-        function joinerSettings(active) {
-            $.getJSON('/home/JoinerSettings', { containerId: active }, function (data) {
-                var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
-                var sourceModel1 = jsonData.SourceModel1;
-                var sourceModel2 = jsonData.SourceModel2;
-                var srcMod1SelCol = jsonData.SourceModel1SelectedColumn;
-                var srcMod2SelCol = jsonData.SourceModel2SelectedColumn;
-                var joinType = jsonData.JoinType;
-                //$('#').empty();
-                //$('#aggregator-table-name').text(sourceModel.ConnectionName + ' -> ' + sourceModel.TableName);
-
-                $('#join-source-1-tb').empty();
-                $('#join-source-2-tb').empty();
-                $('#select-source-1-col').empty();
-                $('#select-source-2-col').empty();
-                $('#select-join-type').val('');
-                //Set source 1
-                $('#select-source-1-col').append('<option >' + '--Select Column Name--' + '</option>');
-                $('#select-source-2-col').append('<option >' + '--Select Column Name--' + '</option>');
-
-                var trHtml = '';
-                var i = '';
-                var isChecked = '';
-                for (i = 0; i < sourceModel1.InputModel.length; i++) //The json object has length
-                {
-                    isChecked = ' value = "false" ';
-                    if (sourceModel1.InputModel[i].OutputFlag === true) {
-                        isChecked = ' value = "true" checked = "checked" ';
-                        $('#select-source-1-col').append('<option value = "' + sourceModel1.InputModel[i].ColumnName + '" > ' + sourceModel1.InputModel[i].ColumnName + '</option>');
-                    }
-                    trHtml += '<tr>' +
-                        '<td>' +
-                        sourceModel1.InputModel[i].ColumnName +
-                        '</td>' +
-                        '<td> <div class="custom-control custom-checkbox"> ' +
-                        '<input type="checkbox" class="checkbox " disabled  ' + isChecked + ' >' +
-                        '</div> </td> </tr>';
-                }
-                $('#join-source-1-tb').append(trHtml);
-                $('#select-source-1-col').val(srcMod1SelCol);
-                //Set source 2
-                trHtml = '';
-                for (i = 0; i < sourceModel2.InputModel.length; i++) //The json object has lenght
-                {
-                    isChecked = ' value = "false"';
-                    if (sourceModel2.InputModel[i].OutputFlag === true) {
-                        isChecked = ' value = "true" checked="checked" ';
-                        $('#select-source-2-col').append('<option value = "' + sourceModel2.InputModel[i].ColumnName + '" > ' + sourceModel2.InputModel[i].ColumnName + '</option>');
-                    }
-                    trHtml += '<tr>' +
-                        '<td>' +
-                        sourceModel2.InputModel[i].ColumnName +
-                        '</td>' +
-                        '<td> <div class="custom-control custom-checkbox"> ' +
-                        '<input type="checkbox" class="checkbox " disabled ' + isChecked + ' >' +
-                        '</div> </td> </tr>';
-                }
-                $('#join-source-2-tb').append(trHtml);
-                $('#select-source-2-col').val(srcMod2SelCol);
-
-
-            }).fail(function (jqXHR, textStatus, errorThrown) {
-                alert('Error getting aggregation settings!');
-            });
-        }
-
-        $('#joinerModelSave').on('click', function () {
-            var model = {
-                SourceModel1SelectedColumn: $('#select-source-1-col').val(),
-                SourceModel2SelectedColumn: $('#select-source-2-col').val(),
-                JoinName: activeContainerId,
-                JoinType: $('#select-join-type').val()
-            }
-
-            $.ajax({
-                url: "Home/JoinerSaveChanges",
-                type: "Post",
-                dataType: "json",
-                contentType: "application/json",
-                data: JSON.stringify(model), //if you need to post Model data, use this
-                success: function (result) {
-                    $("#partial").html(result);
-                }
-            });
-        });
-        $('#create_joiner').click(function () {
-            var operatorId = 'joiner_' + joiner_operatorI;
-            var operatorData = {
-                top: 60,
-                left: 500,
-                properties: {
-                    title: 'Joiner',
-                    inputs: {
-                        input_1: {
-                            label: 'Input 1',
-                        },
-                        input_2: {
-                            label: 'Input 2',
-                        },
-                    },
-                    outputs: {
-                        output_1: {
-                            label: 'Output 1',
-                        }
-                    }
-                }
-            };
-
-            joiner_operatorI++;
-
-            $('#example').flowchart('createOperator', operatorId, operatorData);
-            var source = "joiner";
-            //alert(source + ' - ' + operatorId);
-            updateContainerVal(source, operatorId);
-        });
-        //----------------Join Model code-----------
-
-        //----------------Target Model code-----------
-        function targetSettings(activeContainerId) {
-            $.getJSON('/home/TargetSettings', { containerId: activeContainerId }, function (data) {
-                var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
-
-                $('#target-table-body').empty();
-
-                var joinModel = jsonData.JoinModel;
-                var agrModel = jsonData.AggregatorModel;
-                var connectedFrom = jsonData.ConnectedFrom;
-                var inputModel = jsonData.InputModel;
-                var obj = '';
-                var trHtml = '';
-                var i = 0;
-                if (connectedFrom.includes("joiner")) {
-                    
-                    trHtml = '';
-                    for (i = 0; i < inputModel.length; i++) //The json object has length
-                    {
-                        trHtml += '<tr>' +
-                            '<td>' +
-                            inputModel[i].ColumnName +
-                            '</td> </tr>';
-                    }
-                    $('#target-table-body').append(trHtml);
-                    /*trHtml = '';
-                    for (i = 0; i < joinModel.SourceModel2.InputModel.length; i++) //The json object has length
-                    {
-                        trHtml += '<tr>' +
-                            '<td>' +
-                            joinModel.SourceModel2.InputModel[i].ColumnName +
-                            '</td> </tr>';
-                    }
-                    $('#target-table-body').append(trHtml);*/
-                } else if (connectedFrom.includes("aggregator")) {
-                    obj = agrModel;
-                    trHtml = '';
-                    for (i = 0; i < agrModel.InputModel.length; i++) //The json object has lenght
-                    {
-                        if (agrModel.InputModel[i].OutputFlag === true) {
-                            trHtml += '<tr>' +
-                                '<td>' +
-                                agrModel.InputModel[i].ColumnName + '</td> </tr>';
-                        }
-
-                    }
-                    $('#target-table-body').append(trHtml);
-                }
-
-
-            }).fail(function (jqXHR, textStatus, errorThrown) {
-                alert('Error getting aggregation settings!');
-            });
-        }
-
-        $('#create_target').click(function () {
-            var operatorId = 'target_' + target_operatorI;
-            var operatorData = {
-                top: 60,
-                left: 500,
-                properties: {
-                    title: 'target',
-                    inputs: {
-                        input_1: {
-                            label: 'Input 1',
-                        }
-                    },
-                    outputs: {
-                        output_1: {
-                            label: 'Output 1',
-                        }
-                    }
-                }
-            };
-
-            target_operatorI++;
-
-            $('#example').flowchart('createOperator', operatorId, operatorData);
-            var source = "target";
-            //alert(source + ' - ' + operatorId);
-            updateContainerVal(source, operatorId);
-        });
-        //----------------Target Model code-----------
-
-        //----------------Common---------------------
-        function updateContainerVal(containerName, containerId) {
-            $.getJSON('/home/UpdateContainerVal', { container: containerName, contId: containerId }, function (data) {
-                //var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
-                //$('#connectionList').append('<option >' + '--Select Connection Name--' + '</option>');
-                //for (var i = 0; i < jsonData.length; i++) //The json object has lenght
-                //{
-                //    jsonData[i]; //You are in the current object
-                //    $('#connectionList').append('<option value=' +
-                //        jsonData[i] + '>' + jsonData[i] + '</option>');
-                //}
-
-            }).fail(function (jqXHR, textStatus, errorThrown) {
-                alert('Error setting New Container!');
-            });
-        }
-
-        $(document).ready(function () {
-            // Dropdown list change event.
-            var data = {
-                operators: {
-                    operator1: {
-                        top: 20,
-                        left: 20,
-                        properties: {
-                            title: 'Operator 1',
-                            inputs: {},
-                            outputs: {
-                                output_1: {
-                                    label: 'Output 1',
-                                }
-                            }
-                        }
-                    },
-                    operator2: {
-                        top: 80,
-                        left: 300,
-                        properties: {
-                            title: 'Operator 2',
-                            inputs: {
-                                input_1: {
-                                    label: 'Input 1',
-                                },
-                                input_2: {
-                                    label: 'Input 2',
-                                },
-                            },
-                            outputs: {}
-                        }
-                    },
-                }
-            };
-            // Apply the plugin on a standard, empty div...
-            $('#example').flowchart({
-                //data: data
-            });
-        });
-        var operatorI = 0;
-        $('#create_operator').click(function () {
-            var operatorId = 'created_operator_' + operatorI;
-            var operatorData = {
-                top: 60,
-                left: 500,
-                properties: {
-                    title: 'Operator ' + (operatorI + 3),
-                    inputs: {
-                        input_1: {
-                            label: 'Input 1',
-                        }
-                    },
-                    outputs: {
-                        output_1: {
-                            label: 'Output 1',
-                        }
-                    }
-                }
-            };
-
-            operatorI++;
-
-            $('#example').flowchart('createOperator', operatorId, operatorData);
-        });
-        $('#delete_selected_button').click(function () {
-            $('#example').flowchart('deleteSelected');
-        });
-
-        $('#delete_selected_button').click(function () {
-            $('#example').flowchart('deleteSelected');
-        });
-        $('#properties_selected_button').click(function () {
-            $('#example').flowchart('propertiesSelected');
-        });
-
-        function getOperatorlinkdata(linkdata) {
-            var operatorlinkdata = linkdata;
-            var fromOperator = operatorlinkdata["fromOperator"];
-            var toOperator = operatorlinkdata["toOperator"];
-            $.getJSON('/home/UpdateContainerLinks', { fromContainer: fromOperator, toContainer: toOperator }, function (data) {
-                //var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
-
-
-            }).fail(function (jqXHR, textStatus, errorThrown) {
-                alert('Error setting New Container!');
-            });
-            console.log(linkdata);
-        }
-
-        function propertiesOperator(id) {
-            var operatorid = id;
-            var node_title = id.substr(0, id.indexOf('_'));
-            activeContainerId = operatorid;
-            if (node_title == 'source') {
-                
-                $("#sourcewindow").modal();
-                //--------------Connection Names--------------
-                //set source model values
-                getConnection();
-                //--------------Connection Names--------------
-                //updateSourceOutputFlag();
-            }
-            if (node_title == 'joiner') {
-                joinerSettings(activeContainerId);
-                $("#joinerwindow").modal();
-            }
-
-            if (node_title == 'aggregator') {
-                //set aggregator model values
-                aggregatorSettings(activeContainerId);
-                $("#aggregatorwindow").modal();
-            }
-            if (node_title == 'target') {
-                targetSettings(activeContainerId);
-                $("#targetwindow").modal();
-            }
-
-        }
-
-        $('#newBtn').on('click',
-            function () {
-                $.ajax({
-                    url: "Home/NewModel",
-                    type: "Post",
-                    success: function (result) {
-                        $("#partial").html(result);
-                    }
-                });
-
-            });
-        $('#excelBtn').on('click',
-            function () {
-                $.ajax({
-                    url: "Home/ExcelConnection",
-                    type: "Post",
-                    data: $("form").serialize(), //if you need to post Model data, use this
-                    success: function (result) {
-                        $("#partial").html(result);
-                    }
-                });
-            });
-            $('#executeJob').on('click',
-            function () {
-                $.ajax({
-                    url: "Home/ExecuteJob",
-                    type: "Post",
-                    data: $("form").serialize(), //if you need to post Model data, use this
-                    success: function (result) {
-                        $("#partial").html(result);
-                    }
-                });
-            });
-
-        $('#sqlBtn').on('click',
-            function () {
-                var model = {
-                ServerName: $('#sqlServerServerName').val(),
-                DbName: $('#sqlServerDatabaseName').val(),
-                UserName: $('#sqlServerUserName').val(),
-                Password: $('#sqlServerPassword').val()
-            }
-            $.ajax({
-                url: "Home/SqlServerConnection",
-                type: "Post",
-                dataType: "json",
-                contentType: "application/json",
-                data: JSON.stringify(model), //if you need to post Model data, use this
-                success: function (result) {
-                    if(result === "Failure"){
-                        alert("Connection to SQL Server Failed");
-                    }
-                    else{
-                        $("#sqlServerLi").removeClass("open");
-                        $("#partial").html(result);
-                    }
-                },
-                failure: function(result){
-                        alert('Failed');
-                    }
-            });
-            });
-
-                                //----------------Common---------------------
-    </script>
 </body>
 
 </html>
 
-<script type="text/javascript">
+@* 
+    
+<div class="modal fade" id="filterwindow" role="dialog">
+            <div class="modal-dialog modal-lg">
 
-                            //$("#excel").click(function () {
-                            //    $.ajax({
-                            //        url: "Home/ExcelConnection",
-                            //        type: "Post",
-                            //        data: $("form").serialize(), //if you need to post Model data, use this
-                            //        success: function (result) {
-                            //            $("#partial").html(result);
-                            //        }
-                            //    });
-                            //    $.getJSON('/home/GetConnections', null, function (data) {
-                            //        var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
+                @using (Html.BeginForm("FilterSaveChanges", "Home", FormMethod.Post, new { @id = "filMForm", enctype = "multipart/form-data" }))
+                {
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 class="modal-title">Filter</h3>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered" id="filter-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Select Column</th>
+                                        <th scope="col">Self Column Check</th>
+                                        <th scope="col">Select Operator</th>
+                                        <th scope="col">Value</th>
+                                        <th scope="col">Select Condition</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="filter-table-body">
+                                    @*<tr>
+                                        <td>
+                                            <select id="filter-select-column-0" class="form-control"></select>
+                                        </td>
+                                        <td class="text-center filter-self-column">
+                                            <input id="filter-self-column-0" type="checkbox" class="" data-recId="0" />
+                                        </td>
+                                        <td>
+                                            <select id="filter-select-operator-0" class="form-control"></select>
+                                        </td>
+                                        <td class="filter-column-value-option-text-0" id="filter-column-value-option-text-0">
+                                            <input id="filter-column-value-text-0" type="text" class="form-control" />
+                                        </td>
+                                        <td class="filter-column-value-option-dd-0 hide" id="filter-column-value-option-dd-0">
+                                            <select id="filter-column-value-dd-0" class="form-control"></select>
+                                        </td>
+                                        <td>
+                                            <select id="filter-select-condition-0" class="form-control"></select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select id="filter-select-column-1" class="form-control"></select>
+                                        </td>
+                                        <td class="text-center filter-self-column">
+                                            <input id="filter-self-column-1" type="checkbox" class="" data-recId="1" />
+                                        </td>
+                                        <td>
+                                            <select id="filter-select-operator-1" class="form-control"></select>
+                                        </td>
+                                        <td class="filter-column-value-option-text-1" id="filter-column-value-option-text-1">
+                                            <input id="filter-column-value-text-1" type="text" class="form-control" />
+                                        </td>
+                                        <td class="filter-column-value-option-dd-1 hide" id="filter-column-value-option-dd-1">
+                                            <select id="filter-column-value-dd-1" class="form-control"></select>
+                                        </td>
+                                        <td>
+                                            <select id="filter-select-condition-1" class="form-control"></select>
+                                        </td>
+                                    </tr>*@
+                                @*</tbody>
+                            </table>
+                            <div class="form-group">
+                                <input id="filter-add-row" type="button" class="btn btn-warning btn-sm pull-right" value="Add Filter">
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="button" class="btn btn-warning btn-sm pull-right" value="Reset">
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                            <button type="button" id="filterModelForm" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+                        </div>
 
-                            //        var sourceModel = jsonData.SourceModel;
-                            //        var conn = jsonData.Connection;
-                            //        $('#connectionList').empty();
-                            //        $('#connectionList').append('<option >' + '--Select Connection Name--' + '</option>');
-                            //        for (var i = 0; i < conn.length; i++) //The json object has lenght
-                            //        {
-                            //            conn[i]; //You are in the current object
-                            //            $('#connectionList').append('<option value=' +
-                            //                jsonData[i] + '>' + jsonData[i] + '</option>');
-                            //        }
+                    </div>
+                    <!-- /.modal-content -->
+                }
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
 
-                            //    }).fail(function (jqXHR, textStatus, errorThrown) {
-                            //        alert('Error getting Connections!');
-                            //    });
-                            //});
-</script>
-<script src="~/js/bootstrap.js" type="text/javascript"></script>
-<script src="~/js/ct-navbar.js"></script>
+                                    <li id="create_filter">
+                <a href="#">
+                    <i class="fa fa-object-group"></i>
+                    <p>Filter</p>
+                </a>
+            </li>
+*@
+
+
 
 
 

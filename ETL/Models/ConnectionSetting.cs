@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace ETL.Models
 {
+    [Serializable]
     public class ConnectionSettings
     {
         public ConnectionSettings()

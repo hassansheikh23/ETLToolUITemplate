@@ -4,9 +4,11 @@ using System.IO;
 using Syncfusion.Drawing;
 using Microsoft.AspNetCore.Hosting;
 using System.Data;
+using System;
 
 namespace ETL.Models
 {
+    [Serializable]
     public class Dbconnection
     {
         public string filename { get; set; }

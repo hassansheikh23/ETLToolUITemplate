@@ -469,7 +469,7 @@ $(function () {
         _getOperatorFullElement: function (operatorData) {
             var infos = this.getOperatorCompleteData(operatorData);
 
-            var $operator = $('<div class="flowchart-operator"></div>');
+            var $operator = $('<div id="' + operatorData.opId + '" class="flowchart-operator"></div>');
             $operator.addClass(infos.class);
 
             var $operator_title = $('<div class="flowchart-operator-title"></div>');
@@ -879,7 +879,7 @@ $(function () {
             }
             this.data.operators[operatorId].internal.els.operator.remove();
             delete this.data.operators[operatorId];
-
+            DeleteOperatorfrombackend(operatorId);
             this.callbackEvent('afterChange', ['operator_delete']);
         },
 
@@ -907,7 +907,7 @@ $(function () {
 
             this._cleanMultipleConnectors(fromOperator, fromConnector, 'from');
             this._cleanMultipleConnectors(toOperator, toConnector, 'to');
-
+            DeleteOperatorslink(linkData);
             this.callbackEvent('afterChange', ['link_delete']);
         },
 
