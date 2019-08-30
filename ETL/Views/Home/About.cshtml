@@ -5,3 +5,61 @@
 <h3>@ViewData["Message"]</h3>
 
 <p>Use this area to provide additional information.</p>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>JsTree Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <script>
+        $(function () {
+
+            $('#html1').jstree({
+                'core': {
+                    'data': {
+                        'url': '/Home/Nodes',
+                        'data': function (node) {
+                            return { 'id': node.id };
+                        }
+                    }
+                }
+            });
+
+
+            $('#html1').on('changed.jstree', function (e, data) {
+                      var i, j, r = [];
+                      for (i = 0, j = data.selected.length; i < j; i++) {
+                          r.push(data.instance.get_node(data.selected[i]).text);
+                      }
+                      alert('Selected: ' + r.join(', '));
+                     // $('#event_result').html('Selected: ' + r.join(', '));
+                  }).jstree();
+        });
+    </script>
+</head>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-3">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            JsTree Demo
+                        </div>
+                        <div class="panel-body">
+                            <div id="html1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+
+                </div>
+            </div>
+        </div>
+    </div>

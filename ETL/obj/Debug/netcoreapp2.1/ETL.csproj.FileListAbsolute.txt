@@ -1,0 +1,739 @@
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+C:\Users\Hassan\source\repos\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+C:\Users\Hassan\source\repos\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.Cache
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+C:\Users\Amer\Desktop\ETLAsp\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojResolveAssemblyReference.cache
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Umar\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CheckBoxP.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CheckBoxP.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CheckBoxP.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+E:\Extra\Tasking\ETL Box\ETL\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+E:\Extra\Tasking\Active ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CheckBoxP.g.cshtml.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+E:\Extra\Tasking\Active ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CheckBoxP.g.cshtml.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Hassan\Downloads\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+D:\WORK\Upwork\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CheckBoxP.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+D:\WORK\Upwork\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.Cache
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CheckBoxP.g.cshtml.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+C:\Users\Amer\Desktop\ETL second\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojResolveAssemblyReference.cache
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+D:\WORK\Upwork\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CheckBoxP.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+D:\WORK\Upwork\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CheckBoxP.g.cshtml.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+E:\Extra\Tasking\UpWork\Active\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CheckBoxP.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+C:\Users\Hassan\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.deps.json
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.json
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.runtimeconfig.dev.json
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.pdb
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.Web.Infrastructure.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\WebGrease.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Helpers.xml
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Mvc.xml
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Optimization.xml
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.Razor.xml
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.xml
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Deployment.xml
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\bin\Debug\netcoreapp2.1\System.Web.WebPages.Razor.xml
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csprojAssemblyReference.cache
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Properties.Resources.resources
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.GenerateResource.cache
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CoreCompileInputs.cache
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cache
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorAssemblyInfo.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfoInputs.cache
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.AssemblyInfo.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.input.cache
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.TagHelpers.output.cache
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorCoreGenerate.cache
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CheckBoxP.g.cshtml.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cache
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.RazorTargetAssemblyInfo.cs
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.Views.pdb
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.csproj.CopyComplete
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.dll
+C:\Users\hm250039\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ETL\ETL\ETL\obj\Debug\netcoreapp2.1\ETL.pdb

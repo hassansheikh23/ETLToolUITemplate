@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace ETL.Models
 {
+    [Serializable]
     public class InputModel
     {
         public string ColumnId { get; set; }
@@ -12,6 +13,7 @@ namespace ETL.Models
         public bool InputFlag { get; set; }
         public bool OutputFlag { get; set; }
         public bool GroupByFlag { get; set; }
+        public string toDataType { get; set; }
 
         public InputModel Clone()
         {
@@ -21,7 +23,8 @@ namespace ETL.Models
                 ColumnName = ColumnName,
                 InputFlag = InputFlag,
                 OutputFlag = OutputFlag,
-                GroupByFlag = GroupByFlag
+                GroupByFlag = GroupByFlag,
+                toDataType = toDataType
             };
         }
 

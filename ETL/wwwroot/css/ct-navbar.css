@@ -158,7 +158,8 @@ h1 .subtitle{
     margin-bottom: 8px;
 }
 .navbar-default:not(.navbar-transparent) {
-    background-color: rgba(255, 255, 255, 0.96);
+    /*background-color: rgba(255, 255, 255, 0.96);*/
+    background-color: rgb(102, 97, 91);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .navbar-transparent{

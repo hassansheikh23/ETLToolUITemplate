@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace ETL.Models
 {
+    [Serializable]
     public class JoinModel
     {
         public JoinModel()
@@ -13,7 +14,9 @@ namespace ETL.Models
             SourceModel2 = new SourceModel();
             SourceModel1SelectedColumn = "";
             SourceModel2SelectedColumn = "";
-            JoinName = JoinType = ToSource = "";
+            JoinName = JoinType = ToSource = toConnector = "";
+            top = -1;
+            left = -1;
         }
         public SourceModel SourceModel1 { get; set; }
         public SourceModel SourceModel2 { get; set; }
@@ -22,5 +25,8 @@ namespace ETL.Models
         public string SourceModel1SelectedColumn { get; set; }
         public string SourceModel2SelectedColumn { get; set; }
         public string ToSource { get; set; }
+        public string toConnector { get; set; }
+        public int top { get; set; }
+        public int left { get; set; }
     }
 }
