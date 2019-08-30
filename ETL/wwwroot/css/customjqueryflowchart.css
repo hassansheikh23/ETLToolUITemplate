@@ -1,0 +1,12 @@
+﻿body {
+    background-color: #fafafa;
+}
+
+.container {
+    margin: 150px auto;
+}
+
+.demo {
+    height: 300px;
+    margin-bottom: 10px;
+}
