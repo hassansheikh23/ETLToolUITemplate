@@ -341,6 +341,17 @@ namespace ETL.Controllers
                         int tblLength = (tableName.Length >= 3) ? 3 : tableName.Length;
                         queryParam[0] = tableName.Substring(0, tblLength);
                         queryParam[1] = queryParam[2] = "";
+                        var columnList = new List<string>();
+                        foreach(var item in source.InputModel)
+                        {
+                            //if (item.OutputFlag)
+                            //{
+                                columnList.Add(item.ColumnName);
+                            //}
+                        }
+                        queryParam[3] = columnList;
+                        
+
                         if (dbName != "" && tableName != "")
                         {
                             int l = filterModel.SelectedFilterModel.Count;
@@ -363,7 +374,7 @@ namespace ETL.Controllers
                                     }
                                     else if (item.FilterOperator.Equals("LIKE"))
                                     {
-                                        q = queryParam[0] + "." + item.ColumnName + " LIKE ('" + item.FilterValue + "')";
+                                        q = queryParam[0] + "." + item.ColumnName + " LIKE ('%" + item.FilterValue + "%')";
                                     }
                                     if (!(i == l - 1)) {
                                         q += " " + item.FilterCondition + " ";
@@ -372,9 +383,22 @@ namespace ETL.Controllers
                                     queryParam[2] += q;
                                 }
                             }
+                            string createTableQuery = "";
+                            string strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
+                            createTableQuery += "CREATE TABLE " + dbName.Substring(1) + ".[dbo]." + strTable + "(" ;
+                            createTableQuery += tableName + "_Id int IDENTITY(1,1) NOT NULL,";
+                            string temp = "";
+                            foreach(var item in columnList)
+                            {
+                                temp +=  item + " varchar(100) NULL" + " ,";
+                            }
+                            temp = temp.Substring(0, temp.Length - 1);
+                            createTableQuery += temp + ")";
                             //queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
-                            
-                            sqlQuery = "Create View " + tableName + _SolutionModel.ToJulianDate(DateTime.Now) + " AS SELECT * FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0] + " WHERE " + queryParam[2];
+                            var s = String.Join(",", columnList);
+                            //sqlQuery = "Create View " + tableName + _SolutionModel.ToJulianDate(DateTime.Now) + " AS SELECT * FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0] + " WHERE " + queryParam[2];
+                            string str = "INSERT INTO " + dbName.Substring(1) + ".[dbo]." + strTable + "(" + s + ") ";
+                            sqlQuery = str + " SELECT * FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0] + " WHERE " + queryParam[2];
                             string connetionString = _SolutionModel.getConnectionString();
                             //@"Data Source=desktop-ig62959\PCUSER;Initial Catalog=ETLTest;Integrated Security=True";
                             SqlConnection connection = new SqlConnection(connetionString);
@@ -383,10 +407,19 @@ namespace ETL.Controllers
                             {
                                 //SqlCommand sqlCommand = new SqlCommand("DROP VIEW IF EXISTS [StudentRegistration3]", connection);
                                 //int ret = sqlCommand.ExecuteNonQuery();
-                                SqlCommand sqlCommand = new SqlCommand(sqlQuery, connection);
+                                SqlCommand sqlCommand = new SqlCommand(createTableQuery, connection);
                                 try
                                 {
-                                    sqlCommand.ExecuteNonQuery();
+                                    //SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                                    //DataTable dt = new DataTable();
+                                    //sqlDataAdapter.Fill(dt);
+                                    //foreach (DataRow row in dt.Rows )
+                                    //{
+
+                                    //}
+                                    int ret = sqlCommand.ExecuteNonQuery();
+                                    sqlCommand = new SqlCommand(sqlQuery, connection);
+                                    var res = sqlCommand.ExecuteNonQuery();
                                 }
                                 catch (Exception e)
                                 {
@@ -1656,8 +1689,8 @@ namespace ETL.Controllers
             if (model.ServerName != "" && model.DbName != "" && model.UserName != "" && model.Password != "")
             {
 
-                connetionString = "Server=" + model.ServerName + ";Initial Catalog=" + model.DbName +
-                                    ";Persist Security Info=False;User ID = " + model.UserName + ";Password=" + model.Password +
+                connetionString = "Server=" + @model.ServerName + ";Initial Catalog=" + model.DbName +
+                                    ";Persist Security Info=False;User ID = " + @model.UserName + ";Password=" + model.Password +
                                     ";MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate = True; Connection Timeout = 30;";
                 //";Persist Security Info=False;User ID = " + model.UserName + ";Password=" + model.Password +
                 //";MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate = True; Connection Timeout = 30;";
