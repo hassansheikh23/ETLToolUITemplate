@@ -265,242 +265,66 @@ namespace ETL.Controllers
                 }
                 else if (source.ConnectedTo.Contains("aggregator"))
                 {
-                    object[] queryParam = new object[4];
-                    var aggregatorModel = dataModel.AggregatorDictionary[source.ConnectedTo];
-                    if (aggregatorModel.AggregatorName.Equals(source.ConnectedTo) && aggregatorModel != null)
-                    {
-                        var targetModel = new TargetModel
-                        {
-                            ConnectedFrom = aggregatorModel.AggregatorName
-                        };
-                        foreach (var item in dataModel.TargetDictionary.Values)
-                        {
-                            if (item.ConnectedFrom.Equals(aggregatorModel.AggregatorName))
-                            {
-                                targetModel = item;
-                                break;
-                            }
-                        }
-                        string dbName = source.ConnectionName;
-                        dbName = dbName.Substring(dbName.IndexOf('-'));
-                        string tableName = source.TableName;
-                        int tblLength = (tableName.Length >= 3) ? 3 : tableName.Length;
-                        queryParam[0] = tableName.Substring(0, tblLength);
-                        queryParam[1] = queryParam[2] = "";
-                        if (dbName != "" && tableName != "")
-                        {
-                            
-                            foreach (var item in aggregatorModel.InputModel)
-                            {
-                                if (item.OutputFlag)
-                                {
-                                    queryParam[2] += queryParam[0] + "." + item.ColumnName + ",";
-                                }
-                            }
-                            queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
-                            
-                            sqlQuery = "Create View " + tableName + _SolutionModel.ToJulianDate(DateTime.Now)  + " AS SELECT " + queryParam[2] + " FROM [dbo]." + tableName + " " + queryParam[0] + " GROUP BY " + queryParam[2];
-                            string connetionString = _dataModel.ConnectionString[source.ConnectionName];
-                            //@"Data Source=desktop-ig62959\PCUSER;Initial Catalog=ETLTest;Integrated Security=True";
-                            SqlConnection connection = new SqlConnection(connetionString);
-                            connection.Open();
-                            if (connection != null && connection.State == ConnectionState.Open)
-                            {
-                                //SqlCommand sqlCommand = new SqlCommand("DROP VIEW IF EXISTS [StudentRegistration3]", connection);
-                                //int ret = sqlCommand.ExecuteNonQuery();
-                                SqlCommand sqlCommand = new SqlCommand(sqlQuery, connection);
-                                sqlCommand.ExecuteNonQuery();
-                            }
-                        }
-                        
-                        
+                    SourceAggregatorQuery(source, dataModel);
+                    //object[] queryParam = new object[4];
+                    //var aggregatorModel = dataModel.AggregatorDictionary[source.ConnectedTo];
+                    //if (aggregatorModel.AggregatorName.Equals(source.ConnectedTo) && aggregatorModel != null)
+                    //{
+                    //    var targetModel = new TargetModel
+                    //    {
+                    //        ConnectedFrom = aggregatorModel.AggregatorName
+                    //    };
+                    //    foreach (var item in dataModel.TargetDictionary.Values)
+                    //    {
+                    //        if (item.ConnectedFrom.Equals(aggregatorModel.AggregatorName))
+                    //        {
+                    //            targetModel = item;
+                    //            break;
+                    //        }
+                    //    }
+                    //    string dbName = source.ConnectionName;
+                    //    dbName = dbName.Substring(dbName.IndexOf('-'));
+                    //    string tableName = source.TableName;
+                    //    int tblLength = (tableName.Length >= 3) ? 3 : tableName.Length;
+                    //    queryParam[0] = tableName.Substring(0, tblLength);
+                    //    queryParam[1] = queryParam[2] = "";
+                    //    if (dbName != "" && tableName != "")
+                    //    {
 
-                    }
+                    //        foreach (var item in aggregatorModel.InputModel)
+                    //        {
+                    //            if (item.OutputFlag)
+                    //            {
+                    //                queryParam[2] += queryParam[0] + "." + item.ColumnName + ",";
+                    //            }
+                    //        }
+                    //        queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
+
+                    //        sqlQuery = "Create View " + tableName + _SolutionModel.ToJulianDate(DateTime.Now)  + " AS SELECT " + queryParam[2] + " FROM [dbo]." + tableName + " " + queryParam[0] + " GROUP BY " + queryParam[2];
+                    //        string connetionString = _dataModel.ConnectionString[source.ConnectionName];
+                    //        //@"Data Source=desktop-ig62959\PCUSER;Initial Catalog=ETLTest;Integrated Security=True";
+                    //        SqlConnection connection = new SqlConnection(connetionString);
+                    //        connection.Open();
+                    //        if (connection != null && connection.State == ConnectionState.Open)
+                    //        {
+                    //            //SqlCommand sqlCommand = new SqlCommand("DROP VIEW IF EXISTS [StudentRegistration3]", connection);
+                    //            //int ret = sqlCommand.ExecuteNonQuery();
+                    //            SqlCommand sqlCommand = new SqlCommand(sqlQuery, connection);
+                    //            sqlCommand.ExecuteNonQuery();
+                    //        }
+                    //    }
+                    //}
+                    queryLog = SourceAggregatorQuery(source, dataModel);
                 }
                 else if (source.ConnectedTo.Contains("filter"))
                 {
-                    object[] queryParam = new object[4];
-                    var filterModel = dataModel.FilterDictionary[source.ConnectedTo];
-                    if (filterModel.FilterName.Equals(source.ConnectedTo) && filterModel != null)
-                    {
-                        var targetModel = new TargetModel
-                        {
-                            ConnectedFrom = filterModel.FilterName
-                        };
-                        foreach (var item in dataModel.TargetDictionary.Values)
-                        {
-                            if (item.ConnectedFrom.Equals(filterModel.FilterName))
-                            {
-                                targetModel = item;
-                                break;
-                            }
-                        }
-                        string dbName = source.ConnectionName;
-                        dbName = dbName.Substring(dbName.IndexOf('-'));
-                        string tableName = source.TableName;
-                        int tblLength = (tableName.Length >= 3) ? 3 : tableName.Length;
-                        queryParam[0] = tableName.Substring(0, tblLength);
-                        queryParam[1] = queryParam[2] = "";
-                        var columnList = new List<string>();
-                        foreach(var item in source.InputModel)
-                        {
-                            //if (item.OutputFlag)
-                            //{
-                                columnList.Add(item.ColumnName);
-                            //}
-                        }
-                        queryParam[3] = columnList;
-                        
-
-                        if (dbName != "" && tableName != "")
-                        {
-                            int l = filterModel.SelectedFilterModel.Count;
-                            int i = 0;
-                            foreach (var item in filterModel.SelectedFilterModel)
-                            {
-                                string q = "";
-                                if (!item.ColumnName.Equals(""))
-                                {
-                                    if (item.FilterOperator.Equals("Equal"))
-                                    {
-                                        q = queryParam[0] + "." + item.ColumnName + " = '" + item.FilterValue + "'";
-                                    } else if (item.FilterOperator.Equals("IN"))
-                                    {
-                                        q = queryParam[0] + "." + item.ColumnName + " IN (" + arrangeStr(item.FilterValue) + ")";
-                                    }
-                                    else if (item.FilterOperator.Equals("NOTIN"))
-                                    {
-                                        q = queryParam[0] + "." + item.ColumnName + " NOT IN (" + arrangeStr(item.FilterValue) + ")";
-                                    }
-                                    else if (item.FilterOperator.Equals("LIKE"))
-                                    {
-                                        q = queryParam[0] + "." + item.ColumnName + " LIKE ('%" + item.FilterValue + "%')";
-                                    }
-                                    if (!(i == l - 1)) {
-                                        q += " " + item.FilterCondition + " ";
-                                    }
-                                    i++;
-                                    queryParam[2] += q;
-                                }
-                            }
-                            string createTableQuery = "";
-                            string strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
-                            createTableQuery += "CREATE TABLE " + dbName.Substring(1) + ".[dbo]." + strTable + "(" ;
-                            createTableQuery += tableName + "_Id int IDENTITY(1,1) NOT NULL,";
-                            string temp = "";
-                            foreach(var item in columnList)
-                            {
-                                temp +=  item + " varchar(100) NULL" + " ,";
-                            }
-                            temp = temp.Substring(0, temp.Length - 1);
-                            createTableQuery += temp + ")";
-                            //queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
-                            var s = String.Join(",", columnList);
-                            //sqlQuery = "Create View " + tableName + _SolutionModel.ToJulianDate(DateTime.Now) + " AS SELECT * FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0] + " WHERE " + queryParam[2];
-                            string str = "INSERT INTO " + dbName.Substring(1) + ".[dbo]." + strTable + "(" + s + ") ";
-                            sqlQuery = str + " SELECT * FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0] + " WHERE " + queryParam[2];
-                            string connetionString = _SolutionModel.getConnectionString();
-                            //@"Data Source=desktop-ig62959\PCUSER;Initial Catalog=ETLTest;Integrated Security=True";
-                            SqlConnection connection = new SqlConnection(connetionString);
-                            connection.Open();
-                            if (connection != null && connection.State == ConnectionState.Open)
-                            {
-                                //SqlCommand sqlCommand = new SqlCommand("DROP VIEW IF EXISTS [StudentRegistration3]", connection);
-                                //int ret = sqlCommand.ExecuteNonQuery();
-                                SqlCommand sqlCommand = new SqlCommand(createTableQuery, connection);
-                                try
-                                {
-                                    //SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
-                                    //DataTable dt = new DataTable();
-                                    //sqlDataAdapter.Fill(dt);
-                                    //foreach (DataRow row in dt.Rows )
-                                    //{
-
-                                    //}
-                                    int ret = sqlCommand.ExecuteNonQuery();
-                                    sqlCommand = new SqlCommand(sqlQuery, connection);
-                                    var res = sqlCommand.ExecuteNonQuery();
-                                }
-                                catch (Exception e)
-                                {
-                                    queryLog += e.InnerException;
-                                }
-                            }
-                        }
-                    }
+                    queryLog = SourceFilterQuery(source, dataModel);
                 }
                 else if (source.ConnectedTo.Contains("expression"))
                 {
-                    object[] queryParam = new object[4];
-                    var expressionModel = dataModel.ExpressionDictionary[source.ConnectedTo];
-                    if (expressionModel.ExpressionName.Equals(source.ConnectedTo) && expressionModel != null)
-                    {
-                        var targetModel = new TargetModel
-                        {
-                            ConnectedFrom = expressionModel.ExpressionName
-                        };
-                        foreach (var item in dataModel.TargetDictionary.Values)
-                        {
-                            if (item.ConnectedFrom.Equals(expressionModel.ExpressionName))
-                            {
-                                targetModel = item;
-                                break;
-                            }
-                        }
-                        string dbName = source.ConnectionName;
-                        dbName = dbName.Substring(dbName.IndexOf('-'));
-                        string tableName = source.TableName;
-                        int tblLength = (tableName.Length >= 3) ? 3 : tableName.Length;
-                        queryParam[0] = tableName.Substring(0, tblLength);
-                        queryParam[1] = queryParam[2] = "";
-                        if (dbName != "" && tableName != "")
-                        {
-                            foreach (var item in expressionModel.InputModel)
-                            {
-                                if (item.toDataType != null && item.OutputFlag == true)
-                                {
-                                    if (item.toDataType.Equals("Integar"))
-                                    {
-                                        queryParam[2] += "CAST(" + queryParam[0] + "." + item.ColumnName + " AS INT)"+"AS "+ item.ColumnName + ",";
-                                    }
-                                    else if (item.toDataType.Equals("Float"))
-                                    {
-                                        queryParam[2] += "CAST(" + queryParam[0] + "." + item.ColumnName + " AS Float) " + "AS " + item.ColumnName + ",";
-                                    }
-                                    else if (item.toDataType.Equals("Date"))
-                                    {
-                                        queryParam[2] += "CAST(" + queryParam[0] + "." + item.ColumnName + " AS Date) " + "AS " + item.ColumnName + ",";
-                                    }
-                                    else
-                                    {
-                                        queryParam[2] += "CAST(" + queryParam[0] + "." + item.ColumnName + " AS VARCHAR) " + "AS " + item.ColumnName + ",";
-                                    }
-                                }
-                            }
-                            queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
-
-                            sqlQuery = "Create View " + tableName + _SolutionModel.ToJulianDate(DateTime.Now) + " AS SELECT " + queryParam[2] + " FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0];
-                            string connetionString = _dataModel.ConnectionString[source.ConnectionName];
-                            //@"Data Source=desktop-ig62959\PCUSER;Initial Catalog=ETLTest;Integrated Security=True";
-                            SqlConnection connection = new SqlConnection(connetionString);
-                            connection.Open();
-                            if (connection != null && connection.State == ConnectionState.Open)
-                            {
-                                //SqlCommand sqlCommand = new SqlCommand("DROP VIEW IF EXISTS [StudentRegistration3]", connection);
-                                //int ret = sqlCommand.ExecuteNonQuery();
-                                try
-                                {
-                                    SqlCommand sqlCommand = new SqlCommand(sqlQuery, connection);
-                                    sqlCommand.ExecuteNonQuery();
-                                }
-                                catch(Exception e)
-                                {
-                                    queryLog += e.Message;
-                                }
-                            }
-                        }
-                    }
+                    queryLog = SourceExpressionQuery(source, dataModel);
                 }
+                //Expression
             }
             //-----Model Execution
             if(queryLog == "")
@@ -510,6 +334,307 @@ namespace ETL.Controllers
             return JsonConvert.SerializeObject(queryLog);
         }
         #endregion Source Model
+        #region Execute
+        public TargetModel GetTargetModel(string filterName, DataModel dataModel)
+        {
+            var targetModel = dataModel.TargetDictionary[filterName];
+
+            return targetModel;
+        }
+
+        public string getTablePrefix(string tableName)
+        {
+            int tblLength = (tableName.Length >= 3) ? 3 : tableName.Length;
+            string res = tableName.Substring(0, tblLength);
+            return res;
+        }
+
+        public string ConvertFilterConditionToScript(SelectedFilterModel selectedFilterModel)
+        {
+            string strFilterquery = "";
+
+            return strFilterquery;
+        } 
+        public string SourceFilterQuery(SourceModel source, DataModel dataModel)
+        {
+            string queryLog = "";
+            object[] queryParam = new object[4]; //0 -> Table prefix
+            var filterModel = dataModel.FilterDictionary[source.ConnectedTo];
+            if (filterModel.FilterName.Equals(source.ConnectedTo) && filterModel != null)
+            {
+                var targetModel = new TargetModel
+                {
+                    ConnectedFrom = filterModel.FilterName
+                };
+                foreach (var item in dataModel.TargetDictionary.Values)
+                {
+                    if (item.ConnectedFrom.Equals(filterModel.FilterName))
+                    {
+                        targetModel = item;
+                        break;
+                    }
+                }
+                if (targetModel != null)
+                {
+                    string dbName = source.ConnectionName.Substring(source.ConnectionName.IndexOf('-'));
+                    string tableName = source.TableName;
+                    queryParam[0] = getTablePrefix(tableName);
+                    queryParam[1] = queryParam[2] = "";
+                    var columnList = new List<string>();
+                    foreach (var item in source.InputModel)
+                    {
+                        columnList.Add(item.ColumnName);
+                    }
+                    queryParam[3] = columnList;
+                    int selectedFilterModelCount = filterModel.SelectedFilterModel.Count;
+                    int index = 0;
+                    foreach (var item in filterModel.SelectedFilterModel)
+                    {
+                        string strFilterquery = "";
+                        if (!item.ColumnName.Equals(""))
+                        {
+                            if (item.FilterOperator.Equals("Equal"))
+                            {
+                                strFilterquery = queryParam[0] + "." + item.ColumnName + " = '" + item.FilterValue + "'";
+                            }
+                            else if (item.FilterOperator.Equals("IN"))
+                            {
+                                strFilterquery = queryParam[0] + "." + item.ColumnName + " IN (" + arrangeStr(item.FilterValue) + ")";
+                            }
+                            else if (item.FilterOperator.Equals("NOTIN"))
+                            {
+                                strFilterquery = queryParam[0] + "." + item.ColumnName + " NOT IN (" + arrangeStr(item.FilterValue) + ")";
+                            }
+                            else if (item.FilterOperator.Equals("LIKE"))
+                            {
+                                strFilterquery = queryParam[0] + "." + item.ColumnName + " LIKE ('%" + item.FilterValue + "%')";
+                            }
+                            //check current filter criteria is the last one 
+                            if ((index != selectedFilterModelCount - 1))
+                            {
+                                strFilterquery += " " + item.FilterCondition + " ";
+                            }
+                            index++;
+                            queryParam[2] += strFilterquery;
+                        }
+                    }
+                    string createTableQuery = "";
+                    string strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
+                    createTableQuery += "CREATE TABLE " + dbName.Substring(1) + ".[dbo]." + strTable + "(";
+                    createTableQuery += tableName + "_Id int IDENTITY(1,1) NOT NULL,";
+                    string temp = "";
+                    foreach (var item in columnList)
+                    {
+                        temp += item + " varchar(100) NULL" + " ,";
+                    }
+                    temp = temp.Substring(0, temp.Length - 1);
+                    createTableQuery += temp + ")";
+                    //queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
+                    var s = String.Join(",", columnList);
+                    //sqlQuery = "Create View " + tableName + _SolutionModel.ToJulianDate(DateTime.Now) + " AS SELECT * FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0] + " WHERE " + queryParam[2];
+                    string str = "INSERT INTO " + dbName.Substring(1) + ".[dbo]." + strTable + "(" + s + ") ";
+                    string sqlQuery = str + " SELECT * FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0] + " WHERE " + queryParam[2];
+                    string connetionString = _SolutionModel.getConnectionString();
+                    //@"Data Source=desktop-ig62959\PCUSER;Initial Catalog=ETLTest;Integrated Security=True";
+                    SqlConnection connection = new SqlConnection(connetionString);
+                    connection.Open();
+                    if (connection != null && connection.State == ConnectionState.Open)
+                    {
+                        SqlCommand sqlCommand = new SqlCommand(createTableQuery, connection);
+                        try
+                        {
+                            int ret = sqlCommand.ExecuteNonQuery();
+                            sqlCommand = new SqlCommand(sqlQuery, connection);
+                            var res = sqlCommand.ExecuteNonQuery();
+                        }
+                        catch (Exception e)
+                        {
+                            queryLog += e.InnerException;
+                        }
+                    }
+                }// target Check
+
+                
+            }
+            return queryLog;
+        }
+        public String SourceExpressionQuery(SourceModel source, DataModel dataModel)
+        {
+            string queryLog = "";
+            object[] queryParam = new object[4];
+            var expressionModel = dataModel.ExpressionDictionary[source.ConnectedTo];
+            if (expressionModel.ExpressionName.Equals(source.ConnectedTo) && expressionModel != null)
+            {
+                var targetModel = new TargetModel
+                {
+                    ConnectedFrom = expressionModel.ExpressionName
+                };
+                foreach (var item in dataModel.TargetDictionary.Values)
+                {
+                    if (item.ConnectedFrom.Equals(expressionModel.ExpressionName))
+                    {
+                        targetModel = item;
+                        break;
+                    }
+                }
+                if (targetModel != null)
+                {
+                    string dbName = source.ConnectionName.Substring(source.ConnectionName.IndexOf('-'));
+                    string tableName = source.TableName;
+                    queryParam[0] = getTablePrefix(tableName);
+                    queryParam[1] = queryParam[2] = "";
+                    var columnList = new List<string>();
+                    //foreach (var item in source.InputModel)
+                    //{
+                    //    columnList.Add(item.ColumnName);
+                    //}
+                    queryParam[3] = columnList;
+                    foreach (var item in expressionModel.InputModel)
+                    {
+                        if (item.toDataType != null && item.OutputFlag == true)
+                        {
+                            if (item.toDataType.Equals("Integar"))
+                            {
+                                queryParam[2] += "CAST(" + queryParam[0] + "." + item.ColumnName + " AS INT)" + "AS " + item.ColumnName + ",";
+                            }
+                            else if (item.toDataType.Equals("Float"))
+                            {
+                                queryParam[2] += "CAST(" + queryParam[0] + "." + item.ColumnName + " AS Float) " + "AS " + item.ColumnName + ",";
+                            }
+                            else if (item.toDataType.Equals("Date"))
+                            {
+                                queryParam[2] += "CAST(" + queryParam[0] + "." + item.ColumnName + " AS Date) " + "AS " + item.ColumnName + ",";
+                            }
+                            else
+                            {
+                                queryParam[2] += "CAST(" + queryParam[0] + "." + item.ColumnName + " AS VARCHAR) " + "AS " + item.ColumnName + ",";
+                            }
+                            columnList.Add(item.ColumnName);
+                        }
+                    }
+                    queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
+
+                    string createTableQuery = "";
+                    string strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
+                    createTableQuery += "CREATE TABLE " + dbName.Substring(1) + ".[dbo]." + strTable + "(";
+                    createTableQuery += tableName + "_Id int IDENTITY(1,1) NOT NULL,";
+                    string temp = "";
+                    foreach (var item in columnList)
+                    {
+                        temp += item + " varchar(100) NULL" + " ,";
+                    }
+                    temp = temp.Substring(0, temp.Length - 1);
+                    createTableQuery += temp + ")";
+                    var columnListSelect = String.Join(",", columnList);
+                    string str = "INSERT INTO " + dbName.Substring(1) + ".[dbo]." + strTable + "(" + columnListSelect + ") ";
+                    string sqlQuery = str + "SELECT " + queryParam[2] + " FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0];
+                    //sqlQuery = "SELECT " + queryParam[2] + " FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0];
+                    string connetionString = _SolutionModel.getConnectionString();
+                    SqlConnection connection = new SqlConnection(connetionString);
+                    connection.Open();
+                    if (connection != null && connection.State == ConnectionState.Open)
+                    {
+                        SqlCommand sqlCommand = new SqlCommand(createTableQuery, connection);
+                        try
+                        {
+                            int ret = sqlCommand.ExecuteNonQuery();
+                            sqlCommand = new SqlCommand(sqlQuery, connection);
+                            var res = sqlCommand.ExecuteNonQuery();
+                        }
+                        catch (Exception e)
+                        {
+                            queryLog += e.InnerException;
+                        }
+                    }
+                }
+            }
+            return queryLog;
+        }
+
+        public string SourceAggregatorQuery(SourceModel source, DataModel dataModel)
+        {
+            string queryLog = "";
+            object[] queryParam = new object[4];
+            var aggregatorModel = dataModel.AggregatorDictionary[source.ConnectedTo];
+            if (aggregatorModel.AggregatorName.Equals(source.ConnectedTo) && aggregatorModel != null)
+            {
+                var targetModel = new TargetModel
+                {
+                    ConnectedFrom = aggregatorModel.AggregatorName
+                };
+                foreach (var item in dataModel.TargetDictionary.Values)
+                {
+                    if (item.ConnectedFrom.Equals(aggregatorModel.AggregatorName))
+                    {
+                        targetModel = item;
+                        break;
+                    }
+                }
+                if (targetModel != null)
+                {
+                    string dbName = source.ConnectionName.Substring(source.ConnectionName.IndexOf('-'));
+                    string tableName = source.TableName;
+                    queryParam[0] = getTablePrefix(tableName);
+                    queryParam[1] = queryParam[2] = "";
+                    var columnList = new List<string>();
+                    //foreach (var item in source.InputModel)
+                    //{
+                    //    columnList.Add(item.ColumnName);
+                    //}
+                    queryParam[3] = columnList;
+
+                    foreach (var item in aggregatorModel.InputModel)
+                    {
+                        if (item.OutputFlag)
+                        {
+                            queryParam[2] += queryParam[0] + "." + item.ColumnName + ",";
+                            columnList.Add(item.ColumnName);
+                        }
+                    }
+                    queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
+
+                    string createTableQuery = "";
+                    string strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
+                    createTableQuery += "CREATE TABLE " + dbName.Substring(1) + ".[dbo]." + strTable + "(";
+                    createTableQuery += tableName + "_Id int IDENTITY(1,1) NOT NULL,";
+                    string temp = "";
+                    foreach (var item in columnList)
+                    {
+                        temp += item + " varchar(100) NULL" + " ,";
+                    }
+                    temp = temp.Substring(0, temp.Length - 1);
+                    createTableQuery += temp + ")";
+                    var columnListSelect = String.Join(",", columnList);
+                    string str = "INSERT INTO " + dbName.Substring(1) + ".[dbo]." + strTable + "(" + columnListSelect + ") ";
+                    string sqlQuery = str + " SELECT " + queryParam[2] + " FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0] + " GROUP BY " + queryParam[2];
+                    //sqlQuery = "SELECT " + queryParam[2] + " FROM [dbo]." + tableName + " " + queryParam[0] + " GROUP BY " + queryParam[2];
+                    string connetionString = _SolutionModel.getConnectionString();
+                    SqlConnection connection = new SqlConnection(connetionString);
+                    connection.Open();
+                    if (connection != null && connection.State == ConnectionState.Open)
+                    {
+                        SqlCommand sqlCommand = new SqlCommand(createTableQuery, connection);
+                        try
+                        {
+                            //sqlQuery = "Create View " + tableName + _SolutionModel.ToJulianDate(DateTime.Now) + " AS SELECT " + queryParam[2] + " FROM [dbo]." + tableName + " " + queryParam[0] + " GROUP BY " + queryParam[2];
+                            int ret = sqlCommand.ExecuteNonQuery();
+                            sqlCommand = new SqlCommand(sqlQuery, connection);
+                            var res = sqlCommand.ExecuteNonQuery();
+                        }
+                        catch (Exception e)
+                        {
+                            queryLog += e.InnerException;
+                        }
+                    }
+                }
+
+            }
+            return queryLog;
+        }
+
+        #endregion
+
+
         public string arrangeStr(string str)
         {
             string[] split = str.Split(',');
