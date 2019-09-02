@@ -101,13 +101,13 @@ function myPromiseDelSrc(x, sec) {
         if (sourceElements != null) {
             for (var i = 0, len = sourceElements.length; i < len; i++) {
 
-                $('#example').flowchart('deleteOperator', sourceElements[i].id);
+                $('#example').flowchart('deleteOperatorAtStart', sourceElements[i].id);
             }
         }
         setTimeout(() => {
             console.log('End: ' + x);
             resolve(x);
-        }, sec * 1000);
+        }, sec * 200);
     });
 }
 
@@ -117,13 +117,13 @@ function myPromiseDelTrg(x, sec) {
         if (targetElements != null) {
             for (var i = 0, len = targetElements.length; i < len; i++) {
 
-                $('#example').flowchart('deleteOperator', targetElements[i].id);
+                $('#example').flowchart('deleteOperatorAtStart', targetElements[i].id);
             }
         }
         setTimeout(() => {
             console.log('End: ' + x);
             resolve(x);
-        }, sec * 1000);
+        }, sec * 200);
     });
 }
 
@@ -133,14 +133,14 @@ function myPromiseDelAgr(x, sec) {
         if (aggregatorElements != null) {
             for (var i = 0, len = aggregatorElements.length; i < len; i++) {
 
-                $('#example').flowchart('deleteOperator', aggregatorElements[i].id);
+                $('#example').flowchart('deleteOperatorAtStart', aggregatorElements[i].id);
             }
 
         }
         setTimeout(() => {
             console.log('End: ' + x);
             resolve(x);
-        }, sec * 1000);
+        }, sec * 200);
     });
 }
 
@@ -150,14 +150,14 @@ function myPromiseDelJoiner(x, sec) {
         if (joinerElements != null) {
             for (var i = 0, len = joinerElements.length; i < len; i++) {
 
-                $('#example').flowchart('deleteOperator', joinerElements[i].id);
+                $('#example').flowchart('deleteOperatorAtStart', joinerElements[i].id);
             }
 
         }
         setTimeout(() => {
             console.log('End: ' + x);
             resolve(x);
-        }, sec * 1000);
+        }, sec * 200);
     });
 }
 function myPromiseDelFilter(x, sec) {
@@ -166,14 +166,14 @@ function myPromiseDelFilter(x, sec) {
         if (filterElements != null) {
             for (var i = 0, len = filterElements.length; i < len; i++) {
 
-                $('#example').flowchart('deleteOperator', filterElements[i].id);
+                $('#example').flowchart('deleteOperatorAtStart', filterElements[i].id);
             }
 
         }
         setTimeout(() => {
             console.log('End: ' + x);
             resolve(x);
-        }, sec * 1000);
+        }, sec * 200);
     });
 }
 function myPromiseDelTrans(x, sec) {
@@ -188,7 +188,7 @@ function myPromiseDelTrans(x, sec) {
         setTimeout(() => {
             console.log('End: ' + x);
             resolve(x);
-        }, sec * 1000);
+        }, sec * 200);
     });
 }
 function myPromiseDelLinks(x, sec) {
@@ -196,14 +196,14 @@ function myPromiseDelLinks(x, sec) {
         var links = document.getElementsByClassName("flowchart-link");
         if (links != null) {
             for (var i = 0, len = links.length; i < len; i++) {
-                $('#example').flowchart('deleteLink', links[i].link_id);
+                $('#example').flowchart('deleteLinkAtStart', links[i].link_id);
 
             }
         }
         setTimeout(() => {
             console.log('End: ' + x);
             resolve(x);
-        }, sec * 1000);
+        }, sec * 200);
     });
 }
 function myPromiseload(x, sec, data) {
@@ -561,7 +561,7 @@ function myPromiseload(x, sec, data) {
         setTimeout(() => {
             console.log('End: ' + x);
             resolve(x);
-        }, sec * 1000);
+        }, sec * 200);
     });
 }
 async function SerialFlow(data) {
