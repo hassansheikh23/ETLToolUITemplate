@@ -12913,27 +12913,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hassan\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\Umar\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hassan\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\ETL\\ETL\\ETL.csproj",
+      "projectUniqueName": "C:\\Users\\Umar\\source\\repos\\ETLTool\\ETL\\ETL.csproj",
       "projectName": "ETL",
-      "projectPath": "C:\\Users\\Hassan\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\ETL\\ETL\\ETL.csproj",
-      "packagesPath": "C:\\Users\\Hassan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hassan\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\ETL\\ETL\\obj\\",
+      "projectPath": "C:\\Users\\Umar\\source\\repos\\ETLTool\\ETL\\ETL.csproj",
+      "packagesPath": "C:\\Users\\Umar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Umar\\source\\repos\\ETLTool\\ETL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Hassan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Umar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -12972,7 +12969,6 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
