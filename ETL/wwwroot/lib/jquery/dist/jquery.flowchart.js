@@ -883,6 +883,32 @@ $(function () {
             this.callbackEvent('afterChange', ['operator_delete']);
         },
 
+        deleteOperatorAtStart: function (operatorId) {
+            this._deleteOperator(operatorId, false);
+        },
+
+        _deleteOperatorAtStart: function (operatorId, replace) {
+            if (!this.callbackEvent('operatorDelete', [operatorId, replace])) {
+                return false;
+            }
+            if (!replace) {
+                for (var linkId in this.data.links) {
+                    if (this.data.links.hasOwnProperty(linkId)) {
+                        var currentLink = this.data.links[linkId];
+                        if (currentLink.fromOperator == operatorId || currentLink.toOperator == operatorId) {
+                            this._deleteLink(linkId, true);
+                        }
+                    }
+                }
+            }
+            if (!replace && operatorId == this.selectedOperatorId) {
+                this.unselectOperator();
+            }
+            this.data.operators[operatorId].internal.els.operator.remove();
+            delete this.data.operators[operatorId];
+            this.callbackEvent('afterChange', ['operator_delete']);
+        },
+
         deleteLink: function (linkId) {
             this._deleteLink(linkId, false);
         },
@@ -911,6 +937,33 @@ $(function () {
             this.callbackEvent('afterChange', ['link_delete']);
         },
 
+
+        deleteLinkAtStart: function (linkId) {
+            this._deleteLink(linkId, false);
+        },
+
+        _deleteLinkAtStart: function (linkId, forced) {
+            if (this.selectedLinkId == linkId) {
+                this.unselectLink();
+            }
+            if (!this.callbackEvent('linkDelete', [linkId, forced])) {
+                if (!forced) {
+                    return;
+                }
+            }
+            this.colorizeLink(linkId, 'transparent');
+            var linkData = this.data.links[linkId];
+            var fromOperator = linkData.fromOperator;
+            var fromConnector = linkData.fromConnector;
+            var toOperator = linkData.toOperator;
+            var toConnector = linkData.toConnector;
+            linkData.internal.els.overallGroup.remove();
+            delete this.data.links[linkId];
+
+            this._cleanMultipleConnectors(fromOperator, fromConnector, 'from');
+            this._cleanMultipleConnectors(toOperator, toConnector, 'to');
+            this.callbackEvent('afterChange', ['link_delete']);
+        },
         _cleanMultipleConnectors: function (operator, connector, linkFromTo) {
             if (!this.data.operators[operator].properties[linkFromTo == 'from' ? 'outputs' : 'inputs'][connector].multiple) {
                 return;

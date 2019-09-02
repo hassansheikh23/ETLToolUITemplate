@@ -358,6 +358,7 @@ namespace ETL.Controllers
         public string SourceFilterQuery(SourceModel source, DataModel dataModel)
         {
             string queryLog = "";
+            string strTable = "";
             object[] queryParam = new object[4]; //0 -> Table prefix
             var filterModel = dataModel.FilterDictionary[source.ConnectedTo];
             if (filterModel.FilterName.Equals(source.ConnectedTo) && filterModel != null)
@@ -419,7 +420,7 @@ namespace ETL.Controllers
                         }
                     }
                     string createTableQuery = "";
-                    string strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
+                    strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
                     createTableQuery += "CREATE TABLE " + dbName.Substring(1) + ".[dbo]." + strTable + "(";
                     createTableQuery += tableName + "_Id int IDENTITY(1,1) NOT NULL,";
                     string temp = "";
@@ -456,11 +457,12 @@ namespace ETL.Controllers
 
                 
             }
-            return queryLog;
+            return _ = queryLog + "<br /> table: " + strTable + "is created";
         }
         public String SourceExpressionQuery(SourceModel source, DataModel dataModel)
         {
             string queryLog = "";
+            string strTable = "";
             object[] queryParam = new object[4];
             var expressionModel = dataModel.ExpressionDictionary[source.ConnectedTo];
             if (expressionModel.ExpressionName.Equals(source.ConnectedTo) && expressionModel != null)
@@ -515,7 +517,7 @@ namespace ETL.Controllers
                     queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
 
                     string createTableQuery = "";
-                    string strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
+                    strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
                     createTableQuery += "CREATE TABLE " + dbName.Substring(1) + ".[dbo]." + strTable + "(";
                     createTableQuery += tableName + "_Id int IDENTITY(1,1) NOT NULL,";
                     string temp = "";
@@ -548,12 +550,13 @@ namespace ETL.Controllers
                     }
                 }
             }
-            return queryLog;
+            return _ = queryLog + "<br /> table: " + strTable+ "is created";
         }
 
         public string SourceAggregatorQuery(SourceModel source, DataModel dataModel)
         {
             string queryLog = "";
+            string strTable = "";
             object[] queryParam = new object[4];
             var aggregatorModel = dataModel.AggregatorDictionary[source.ConnectedTo];
             if (aggregatorModel.AggregatorName.Equals(source.ConnectedTo) && aggregatorModel != null)
@@ -594,7 +597,7 @@ namespace ETL.Controllers
                     queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
 
                     string createTableQuery = "";
-                    string strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
+                    strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
                     createTableQuery += "CREATE TABLE " + dbName.Substring(1) + ".[dbo]." + strTable + "(";
                     createTableQuery += tableName + "_Id int IDENTITY(1,1) NOT NULL,";
                     string temp = "";
@@ -629,7 +632,7 @@ namespace ETL.Controllers
                 }
 
             }
-            return queryLog;
+            return _ = queryLog + "<br /> table: " + strTable + " is created";
         }
 
         #endregion
