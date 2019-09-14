@@ -171,7 +171,6 @@ namespace ETL.Controllers
                 if (source.ConnectedTo.Contains("joiner"))
                 {
                     object[] arr = new object[8];
-
                     var joinerModel = dataModel.JoinDictionary[source.ConnectedTo];
                     if (joinerModel.JoinName.Equals(source.ConnectedTo) && joinerModel != null)
                     {
@@ -265,55 +264,6 @@ namespace ETL.Controllers
                 }
                 else if (source.ConnectedTo.Contains("aggregator"))
                 {
-                    SourceAggregatorQuery(source, dataModel);
-                    //object[] queryParam = new object[4];
-                    //var aggregatorModel = dataModel.AggregatorDictionary[source.ConnectedTo];
-                    //if (aggregatorModel.AggregatorName.Equals(source.ConnectedTo) && aggregatorModel != null)
-                    //{
-                    //    var targetModel = new TargetModel
-                    //    {
-                    //        ConnectedFrom = aggregatorModel.AggregatorName
-                    //    };
-                    //    foreach (var item in dataModel.TargetDictionary.Values)
-                    //    {
-                    //        if (item.ConnectedFrom.Equals(aggregatorModel.AggregatorName))
-                    //        {
-                    //            targetModel = item;
-                    //            break;
-                    //        }
-                    //    }
-                    //    string dbName = source.ConnectionName;
-                    //    dbName = dbName.Substring(dbName.IndexOf('-'));
-                    //    string tableName = source.TableName;
-                    //    int tblLength = (tableName.Length >= 3) ? 3 : tableName.Length;
-                    //    queryParam[0] = tableName.Substring(0, tblLength);
-                    //    queryParam[1] = queryParam[2] = "";
-                    //    if (dbName != "" && tableName != "")
-                    //    {
-
-                    //        foreach (var item in aggregatorModel.InputModel)
-                    //        {
-                    //            if (item.OutputFlag)
-                    //            {
-                    //                queryParam[2] += queryParam[0] + "." + item.ColumnName + ",";
-                    //            }
-                    //        }
-                    //        queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
-
-                    //        sqlQuery = "Create View " + tableName + _SolutionModel.ToJulianDate(DateTime.Now)  + " AS SELECT " + queryParam[2] + " FROM [dbo]." + tableName + " " + queryParam[0] + " GROUP BY " + queryParam[2];
-                    //        string connetionString = _dataModel.ConnectionString[source.ConnectionName];
-                    //        //@"Data Source=desktop-ig62959\PCUSER;Initial Catalog=ETLTest;Integrated Security=True";
-                    //        SqlConnection connection = new SqlConnection(connetionString);
-                    //        connection.Open();
-                    //        if (connection != null && connection.State == ConnectionState.Open)
-                    //        {
-                    //            //SqlCommand sqlCommand = new SqlCommand("DROP VIEW IF EXISTS [StudentRegistration3]", connection);
-                    //            //int ret = sqlCommand.ExecuteNonQuery();
-                    //            SqlCommand sqlCommand = new SqlCommand(sqlQuery, connection);
-                    //            sqlCommand.ExecuteNonQuery();
-                    //        }
-                    //    }
-                    //}
                     queryLog = SourceAggregatorQuery(source, dataModel);
                 }
                 else if (source.ConnectedTo.Contains("filter"))
@@ -355,6 +305,105 @@ namespace ETL.Controllers
 
             return strFilterquery;
         } 
+
+        public string SourceJoinerQuery(SourceModel source, DataModel dataModel)
+        {
+            string queryLog = "";
+            string sqlQuery = "";
+            object[] joinerQuery = new object[8];
+            object[] arr = new object[8];
+
+            var joinerModel = dataModel.JoinDictionary[source.ConnectedTo];
+            if (joinerModel.JoinName.Equals(source.ConnectedTo) && joinerModel != null)
+            {
+                string src1SelCol = joinerModel.SourceModel1SelectedColumn;
+                string src2SelCOl = joinerModel.SourceModel2SelectedColumn;
+
+                string joinType = joinerModel.JoinType;
+                var targetModel = new TargetModel
+                {
+                    ConnectedFrom = joinerModel.JoinName
+                };
+                foreach (var item in dataModel.TargetDictionary.Values)
+                {
+                    if (item.ConnectedFrom.Equals(joinerModel.JoinName))
+                    {
+                        targetModel = item;
+                        break;
+                    }
+                }
+                //generate Sql Server Query
+                string dbName = source.ConnectionName.Substring(source.ConnectionName.IndexOf('-'));
+                string tableName = source.TableName;
+                if (dbName != "" && tableName != "")
+                {
+                    if (sqlQuery != "")
+                    {
+                        tableName = targetModel.JoinModel.SourceModel2.TableName;
+                        var tblColSel = "";
+                        int tblLength = (tableName.Length >= 3) ? 3 : tableName.Length;
+                        foreach (var item in targetModel.JoinModel.SourceModel2.InputModel)
+                        {
+
+                            var duplicateColName = joinerQuery[0].ToString();
+                            var duplicateCol = duplicateColName.Contains(item.ColumnName.ToUpper());
+
+                            if (item.OutputFlag && !duplicateCol)
+                            {
+                                tblColSel += tableName.Substring(0, tblLength) + "." + item.ColumnName.ToUpper() + ",";
+                            }
+                        }
+                        tblColSel = tblColSel.Substring(0, tblColSel.Length - 1);
+                        joinerQuery[0] = joinerQuery[0] + tblColSel;
+                        //joinerQuery[0] += "," + tableName.ElementAt(0) + ".*";
+                        joinerQuery[2] = tableName;
+                        joinerQuery[3] = targetModel.JoinModel.JoinType;
+                        joinerQuery[5] = targetModel.JoinModel.SourceModel2SelectedColumn;
+                        joinerQuery[7] = tableName.Substring(0, tblLength).ToUpper();
+                        //string queryHeader = "IF OBJECT_ID('StudentRegistration" + viewCounter + "', 'V') IS NOT NULL DROP VIEW StudentRegistration3 GO use[ETLTest] GO";
+                        sqlQuery = " CREATE VIEW [dbo]." + joinerQuery[1] + joinerQuery[2] + _SolutionModel.ToJulianDate(DateTime.Now) + " AS " + 
+                            "SELECT " + joinerQuery[0].ToString() + " FROM " + joinerQuery[1].ToString() + " " + joinerQuery[6].ToString() +
+                                    " " + joinerQuery[3] + " " +
+                                    joinerQuery[2].ToString() + " " + joinerQuery[7].ToString() +
+                                    " ON " + joinerQuery[6].ToString() + "." + joinerQuery[4].ToString() +
+                                    " = " + joinerQuery[7].ToString() + "." + joinerQuery[5].ToString();
+                        string connetionString = _dataModel.ConnectionString[source.ConnectionName];
+                        //@"Data Source=desktop-ig62959\PCUSER;Initial Catalog=ETLTest;Integrated Security=True";
+                        SqlConnection connection = new SqlConnection(connetionString);
+                        connection.Open();
+                        if (connection != null && connection.State == ConnectionState.Open)
+                        {
+                            //SqlCommand sqlCommand = new SqlCommand("DROP VIEW IF EXISTS [StudentRegistration3]", connection);
+                            //int ret = sqlCommand.ExecuteNonQuery();
+                            SqlCommand sqlCommand = new SqlCommand(sqlQuery, connection);
+                            sqlCommand.ExecuteNonQuery();
+                        }
+
+                    }
+                    else
+                    {
+                        sqlQuery = "Joiner";
+                        tableName = targetModel.JoinModel.SourceModel1.TableName;
+                        int tblLength = (tableName.Length >= 3) ? 3 : tableName.Length;
+                        var tblColSel = "";
+                        foreach (var item in targetModel.JoinModel.SourceModel1.InputModel)
+                        {
+                            if (item.OutputFlag)
+                            {
+                                tblColSel += tableName.Substring(0, tblLength) + "0" + "." + item.ColumnName.ToUpper() + ",";
+                            }
+                        }
+                        joinerQuery[0] = tblColSel;
+                        //joinerQuery[0] = tableName.ElementAt(0) + ".*";
+                        joinerQuery[1] = tableName;
+                        joinerQuery[3] = targetModel.JoinModel.JoinType;
+                        joinerQuery[4] = targetModel.JoinModel.SourceModel1SelectedColumn;
+                        joinerQuery[6] = tableName.Substring(0, tblLength).ToUpper() + "0";
+                    }
+                } // (dbName != "" && tableName != "")
+            }
+            return queryLog;
+        }
         public string SourceFilterQuery(SourceModel source, DataModel dataModel)
         {
             string queryLog = "";
@@ -580,10 +629,6 @@ namespace ETL.Controllers
                     queryParam[0] = getTablePrefix(tableName);
                     queryParam[1] = queryParam[2] = "";
                     var columnList = new List<string>();
-                    //foreach (var item in source.InputModel)
-                    //{
-                    //    columnList.Add(item.ColumnName);
-                    //}
                     queryParam[3] = columnList;
 
                     foreach (var item in aggregatorModel.InputModel)
@@ -636,7 +681,6 @@ namespace ETL.Controllers
         }
 
         #endregion
-
 
         public string arrangeStr(string str)
         {
