@@ -600,7 +600,7 @@ $('#srcModelSave').on('click', function () {
         SourceName: activeContainerId
 
     }
-
+    console.log('Source Output FLags:' + $('#SourceOutputFlags').val());
     $.ajax({
         url: "Home/SourceSaveChanges",
         type: "Post",
@@ -669,6 +669,7 @@ function getTableHeader(connectionName, tableName) {
                         '</div> </td> </tr>';
                 }
                 $('#sourceTableBody').append(trHTML);
+                updateSourceOutputFlag();
             }
 
 
@@ -720,6 +721,8 @@ function getConnection() {
         $('#connectionList option').remove();
         $('#sourceTableList option').remove();
         $('#sourceTableBody').empty();
+        $('#sourceTableName').empty();   
+        $('#sourceTableName').text('Table Name');  
         console.log('Connection Calling');
         var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
         var conn = jsonData.Connection;
@@ -737,12 +740,18 @@ function getConnection() {
         //-----------Set Source Window Config-----------
         if (sourceModel.TableName != '') {
             $('#connectionList').val(sourceModel.ConnectionName);
-
+            $('#sourceTableName').text(sourceModel.TableName);
+            
+            if (sourceModel.TableName === '--Select Table Name--') {
+                $('#sourceTableName').text('Table Name');   
+            }
+               
+            console.log($('#sourceTableName').val() + '------' + sourceModel.TableName);
             console.log(sourceModel.ConnectionName + '--' + sourceModel.TableName);
             let res = getTables($('#connectionList').val(), sourceModel.TableName);
             console.log(res);
-
             getTableHeader($('#connectionList').val(), sourceModel.TableName);
+            
         }
     }).fail(function (jqXHR, textStatus, errorThrown) {
         alert('Error getting categories!');
@@ -851,7 +860,8 @@ function aggregatorSettings(activeContainerId) {
         var names = [];
         for (var i = 0; i < inputModel.length; i++) //The json object has lenght
         {
-            isChecked = ' value = "false" disabled="disabled"';
+            //isChecked = ' value = "false" disabled="disabled"';
+            isChecked = ' value = "false"';
             if (inputModel[i].OutputFlag === true) {
                 isChecked = ' value = "true" checked="checked" ';
 

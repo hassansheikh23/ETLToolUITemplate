@@ -542,7 +542,7 @@
                         <h3 class="modal-title">Source</h3>
                     </div>
                     <div class="modal-body">
-                        <h5 class="text-center">Table1</h5>
+                        <h5 class="text-center" id="sourceTableName"></h5>
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="connectionList">Connections</label>
@@ -657,6 +657,10 @@
                             <h3 class="modal-title">Filter</h3>
                         </div>
                         <div class="modal-body">
+                            <div class="form-group">
+                                <input id="filter-add-row" type="button" class="btn btn-warning btn-sm " value="Add Filter">
+                                <div class="clearfix"></div>
+                            </div>
                             <table class="table table-bordered" id="filter-table">
                                 <thead>
                                     <tr>
@@ -665,61 +669,60 @@
                                         <th scope="col">Select Operator</th>
                                         <th scope="col">Value</th>
                                         <th scope="col">Select Condition</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody id="filter-table-body">
                                     @*<tr>
-                                            <td>
-                                                <select id="filter-select-column-0" class="form-control"></select>
-                                            </td>
-                                            <td class="text-center filter-self-column">
-                                                <input id="filter-self-column-0" type="checkbox" class="" data-recId="0" />
-                                            </td>
-                                            <td>
-                                                <select id="filter-select-operator-0" class="form-control"></select>
-                                            </td>
-                                            <td class="filter-column-value-option-text-0" id="filter-column-value-option-text-0">
-                                                <input id="filter-column-value-text-0" type="text" class="form-control" />
-                                            </td>
-                                            <td class="filter-column-value-option-dd-0 hide" id="filter-column-value-option-dd-0">
-                                                <select id="filter-column-value-dd-0" class="form-control"></select>
-                                            </td>
-                                            <td>
-                                                <select id="filter-select-condition-0" class="form-control"></select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <select id="filter-select-column-1" class="form-control"></select>
-                                            </td>
-                                            <td class="text-center filter-self-column">
-                                                <input id="filter-self-column-1" type="checkbox" class="" data-recId="1" />
-                                            </td>
-                                            <td>
-                                                <select id="filter-select-operator-1" class="form-control"></select>
-                                            </td>
-                                            <td class="filter-column-value-option-text-1" id="filter-column-value-option-text-1">
-                                                <input id="filter-column-value-text-1" type="text" class="form-control" />
-                                            </td>
-                                            <td class="filter-column-value-option-dd-1 hide" id="filter-column-value-option-dd-1">
-                                                <select id="filter-column-value-dd-1" class="form-control"></select>
-                                            </td>
-                                            <td>
-                                                <select id="filter-select-condition-1" class="form-control"></select>
-                                            </td>
-                                        </tr>*@
+                    <td>
+                        <select id="filter-select-column-0" class="form-control"></select>
+                    </td>
+                    <td class="text-center filter-self-column">
+                        <input id="filter-self-column-0" type="checkbox" class="" data-recId="0" />
+                    </td>
+                    <td>
+                        <select id="filter-select-operator-0" class="form-control"></select>
+                    </td>
+                    <td class="filter-column-value-option-text-0" id="filter-column-value-option-text-0">
+                        <input id="filter-column-value-text-0" type="text" class="form-control" />
+                    </td>
+                    <td class="filter-column-value-option-dd-0 hide" id="filter-column-value-option-dd-0">
+                        <select id="filter-column-value-dd-0" class="form-control"></select>
+                    </td>
+                    <td>
+                        <select id="filter-select-condition-0" class="form-control"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="filter-select-column-1" class="form-control"></select>
+                    </td>
+                    <td class="text-center filter-self-column">
+                        <input id="filter-self-column-1" type="checkbox" class="" data-recId="1" />
+                    </td>
+                    <td>
+                        <select id="filter-select-operator-1" class="form-control"></select>
+                    </td>
+                    <td class="filter-column-value-option-text-1" id="filter-column-value-option-text-1">
+                        <input id="filter-column-value-text-1" type="text" class="form-control" />
+                    </td>
+                    <td class="filter-column-value-option-dd-1 hide" id="filter-column-value-option-dd-1">
+                        <select id="filter-column-value-dd-1" class="form-control"></select>
+                    </td>
+                    <td>
+                        <select id="filter-select-condition-1" class="form-control"></select>
+                    </td>
+                </tr>*@
                                 </tbody>
                             </table>
-                            <div class="form-group">
-                                <input id="filter-add-row" type="button" class="btn btn-warning btn-sm pull-right" value="Add Filter">
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="form-group">
+
+                            @*<div class="form-group">
                                 <input type="button" class="btn btn-warning btn-sm pull-right" value="Reset">
                                 <div class="clearfix"></div>
-                            </div>
+                            </div>*@
                         </div>
                         <div class="modal-footer">
+                            <button type="button" class="btn btn-default " data-dismiss="modal">Reset</button>
                             <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
                             <button type="button" id="filterModelForm" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
                         </div>
