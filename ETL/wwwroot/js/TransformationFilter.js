@@ -126,7 +126,7 @@ function filterSettings(activeContainerId) {
     });
 }
 function addRowHTML(counterId) {
-    var html = "<tr> <td> <select id ='filter-select-column-" + counterId + "' class='form-control'></select > </td > " +
+    var html = "<tr > <td> <select id ='filter-select-column-" + counterId + "' class='form-control'></select > </td > " +
         "<td class='text-center filter-self-column'>" +
         "<input id='filter-self-column-" + counterId + "' type='checkbox' class='' data-recId='" + counterId + "' />" +
         "</td>" +
@@ -142,6 +142,7 @@ function addRowHTML(counterId) {
         "<td>" +
         "<select id='filter-select-condition-" + counterId + "' class='form-control'></select>" +
         "</td>" +
+        "<td>" + "<input id='filter-delete-row-" + counterId + "' type='button' class='btn btn-warning btn-sm pull-right filter-delete-row' value='Remove' />" + "</td>" +
         //"<td>" +
         //"<select id='filter-select-order-" + counterId + "' class='form-control' disabled></select>" +
         //"</td> " +
@@ -149,12 +150,24 @@ function addRowHTML(counterId) {
     return html;
 }
 
+$('tbody').on('click', '.filter-delete-row', function () {
+    // do something
+    alert($(this).prop('id'));
+    $(this).parent("td:first").parent("tr:first").remove();
+});
+
+$('.filter-delete-row input[type = "button"]').on('click', function (e) {
+    alert();
+})
+
+//    input[type = "button"]').on('click', function (e) {
+   
 $('#filter-add-row').on('click', function (e) {
     filter_row_count++;
-    var counterId = filter_row_count;
-    var html = addRowHTML(counterId);
+    var counterid = filter_row_count;
+    var html = addRowHTML(counterid);
     $('#filter-table-body').append(html);
-    setFilterModelRowDDOptions(counterId);
+    setFilterModelRowDDOptions(counterid);
 });
 
 $('.filter-self-column input[type="checkbox"]').on('change', function () {
