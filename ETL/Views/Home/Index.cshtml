@@ -624,6 +624,11 @@
 
                                         <th scope="col">Output Columns</th>
                                         <th scope="col">GroupBy</th>
+                                        <th scope="col">Count</th>
+                                        <th scope="col">Sum</th>
+                                        <th scope="col">Max</th>
+                                        <th scope="col">Min</th>
+                                        <th scope="col">Avg</th>
 
                                     </tr>
                                 </thead>
@@ -674,52 +679,52 @@
                                 </thead>
                                 <tbody id="filter-table-body">
                                     @*<tr>
-                    <td>
-                        <select id="filter-select-column-0" class="form-control"></select>
-                    </td>
-                    <td class="text-center filter-self-column">
-                        <input id="filter-self-column-0" type="checkbox" class="" data-recId="0" />
-                    </td>
-                    <td>
-                        <select id="filter-select-operator-0" class="form-control"></select>
-                    </td>
-                    <td class="filter-column-value-option-text-0" id="filter-column-value-option-text-0">
-                        <input id="filter-column-value-text-0" type="text" class="form-control" />
-                    </td>
-                    <td class="filter-column-value-option-dd-0 hide" id="filter-column-value-option-dd-0">
-                        <select id="filter-column-value-dd-0" class="form-control"></select>
-                    </td>
-                    <td>
-                        <select id="filter-select-condition-0" class="form-control"></select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <select id="filter-select-column-1" class="form-control"></select>
-                    </td>
-                    <td class="text-center filter-self-column">
-                        <input id="filter-self-column-1" type="checkbox" class="" data-recId="1" />
-                    </td>
-                    <td>
-                        <select id="filter-select-operator-1" class="form-control"></select>
-                    </td>
-                    <td class="filter-column-value-option-text-1" id="filter-column-value-option-text-1">
-                        <input id="filter-column-value-text-1" type="text" class="form-control" />
-                    </td>
-                    <td class="filter-column-value-option-dd-1 hide" id="filter-column-value-option-dd-1">
-                        <select id="filter-column-value-dd-1" class="form-control"></select>
-                    </td>
-                    <td>
-                        <select id="filter-select-condition-1" class="form-control"></select>
-                    </td>
-                </tr>*@
+                                            <td>
+                                                <select id="filter-select-column-0" class="form-control"></select>
+                                            </td>
+                                            <td class="text-center filter-self-column">
+                                                <input id="filter-self-column-0" type="checkbox" class="" data-recId="0" />
+                                            </td>
+                                            <td>
+                                                <select id="filter-select-operator-0" class="form-control"></select>
+                                            </td>
+                                            <td class="filter-column-value-option-text-0" id="filter-column-value-option-text-0">
+                                                <input id="filter-column-value-text-0" type="text" class="form-control" />
+                                            </td>
+                                            <td class="filter-column-value-option-dd-0 hide" id="filter-column-value-option-dd-0">
+                                                <select id="filter-column-value-dd-0" class="form-control"></select>
+                                            </td>
+                                            <td>
+                                                <select id="filter-select-condition-0" class="form-control"></select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <select id="filter-select-column-1" class="form-control"></select>
+                                            </td>
+                                            <td class="text-center filter-self-column">
+                                                <input id="filter-self-column-1" type="checkbox" class="" data-recId="1" />
+                                            </td>
+                                            <td>
+                                                <select id="filter-select-operator-1" class="form-control"></select>
+                                            </td>
+                                            <td class="filter-column-value-option-text-1" id="filter-column-value-option-text-1">
+                                                <input id="filter-column-value-text-1" type="text" class="form-control" />
+                                            </td>
+                                            <td class="filter-column-value-option-dd-1 hide" id="filter-column-value-option-dd-1">
+                                                <select id="filter-column-value-dd-1" class="form-control"></select>
+                                            </td>
+                                            <td>
+                                                <select id="filter-select-condition-1" class="form-control"></select>
+                                            </td>
+                                        </tr>*@
                                 </tbody>
                             </table>
 
                             @*<div class="form-group">
-                                <input type="button" class="btn btn-warning btn-sm pull-right" value="Reset">
-                                <div class="clearfix"></div>
-                            </div>*@
+                                    <input type="button" class="btn btn-warning btn-sm pull-right" value="Reset">
+                                    <div class="clearfix"></div>
+                                </div>*@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default " data-dismiss="modal">Reset</button>
@@ -862,64 +867,69 @@
         </div>
 
     </div>
+    <!--   Core JS Files. Extra: TouchPunch for touch library inside jquery-ui.min.js   -->
+    <!-- partial -->
+    @*<script src="~/js/ct-navbar.js"></script>*@
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    @*<script src="../../paperassets/js/jquery-3.1.1.min.js" type="text/javascript"></script>*@
+    @*<script src="../../paperassets/js/jquery-ui.min.js" type="text/javascript"></script>*@
+    <script src="../../paperassets/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+    @*<script src="../../paperassets/js/bootstrap.min.js" type="text/javascript"></script>*@
+    <!--  Forms Validations Plugin -->
+    <script src="../../paperassets/js/jquery.validate.min.js"></script>
+    <!-- Promise Library for SweetAlert2 working on IE -->
+    <script src="../../paperassets/js/es6-promise-auto.min.js"></script>
+    <!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+    <script src="../../paperassets/js/moment.min.js"></script>
+    <!--  Date Time Picker Plugin is included in this js file -->
+    <script src="../../paperassets/js/bootstrap-datetimepicker.js"></script>
+    <!--  Select Picker Plugin -->
+    <script src="../../paperassets/js/bootstrap-selectpicker.js"></script>
+    <!--  Switch and Tags Input Plugins -->
+    <script src="../../paperassets/js/bootstrap-switch-tags.js"></script>
+    <!-- Circle Percentage-chart -->
+    <script src="../../paperassets/js/jquery.easypiechart.min.js"></script>
+    <!--  Charts Plugin -->
+    <script src="../../paperassets/js/chartist.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="../../paperassets/js/bootstrap-notify.js"></script>
+    <!-- Sweet Alert 2 plugin -->
+    <script src="../../paperassets/js/sweetalert2.js"></script>
+    <!-- Vector Map plugin -->
+    <script src="../../paperassets/js/jquery-jvectormap.js"></script>
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Wizard Plugin    -->
+    <script src="../../paperassets/js/jquery.bootstrap.wizard.min.js"></script>
+    <!--  Bootstrap Table Plugin    -->
+    <script src="../../paperassets/js/bootstrap-table.js"></script>
+    <!--  Plugin for DataTables.net  -->
+    <script src="../../paperassets/js/jquery.datatables.js"></script>
+    <!--  Full Calendar Plugin    -->
+    <script src="../../paperassets/js/fullcalendar.min.js"></script>
+    <!-- Paper Dashboard PRO Core javascript and methods for Demo purpose -->
+    <script src="../../paperassets/js/paper-dashboard.js"></script>
+    <!-- Paper Dashboard PRO DEMO methods, don't include it in your project! -->
+    <script src="../../paperassets/js/demo.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            demo.initOverviewDashboard();
+            demo.initCirclePercentage();
+
+        });
+    </script>
+
+    <script src="~/lib/jquery/dist/jquery.flowchart.js"></script>
+    <script src="~/js/customflowchart.js"></script>
+    <script src="~/js/bootstrap.js" type="text/javascript"></script>
+    <script src="~/js/terminalscript.js" type="text/javascript"></script>
+    <script src="~/js/TransformationFilter.js" type="text/javascript"></script>
+    <script src="~/js/Expression.js" type="text/javascript"></script>
+    <script src="~/js/Source.js" type="text/javascript"></script>
+    <script src="~/js/Aggregator.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js" type="text/javascript"></script>
 </body>
 
-<!--   Core JS Files. Extra: TouchPunch for touch library inside jquery-ui.min.js   -->
-<!-- partial -->
-@*<script src="~/js/ct-navbar.js"></script>*@
-<script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-@*<script src="../../paperassets/js/jquery-3.1.1.min.js" type="text/javascript"></script>*@
-@*<script src="../../paperassets/js/jquery-ui.min.js" type="text/javascript"></script>*@
-<script src="../../paperassets/js/perfect-scrollbar.min.js" type="text/javascript"></script>
-@*<script src="../../paperassets/js/bootstrap.min.js" type="text/javascript"></script>*@
-<!--  Forms Validations Plugin -->
-<script src="../../paperassets/js/jquery.validate.min.js"></script>
-<!-- Promise Library for SweetAlert2 working on IE -->
-<script src="../../paperassets/js/es6-promise-auto.min.js"></script>
-<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
-<script src="../../paperassets/js/moment.min.js"></script>
-<!--  Date Time Picker Plugin is included in this js file -->
-<script src="../../paperassets/js/bootstrap-datetimepicker.js"></script>
-<!--  Select Picker Plugin -->
-<script src="../../paperassets/js/bootstrap-selectpicker.js"></script>
-<!--  Switch and Tags Input Plugins -->
-<script src="../../paperassets/js/bootstrap-switch-tags.js"></script>
-<!-- Circle Percentage-chart -->
-<script src="../../paperassets/js/jquery.easypiechart.min.js"></script>
-<!--  Charts Plugin -->
-<script src="../../paperassets/js/chartist.min.js"></script>
-<!--  Notifications Plugin    -->
-<script src="../../paperassets/js/bootstrap-notify.js"></script>
-<!-- Sweet Alert 2 plugin -->
-<script src="../../paperassets/js/sweetalert2.js"></script>
-<!-- Vector Map plugin -->
-<script src="../../paperassets/js/jquery-jvectormap.js"></script>
-<!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-<!-- Wizard Plugin    -->
-<script src="../../paperassets/js/jquery.bootstrap.wizard.min.js"></script>
-<!--  Bootstrap Table Plugin    -->
-<script src="../../paperassets/js/bootstrap-table.js"></script>
-<!--  Plugin for DataTables.net  -->
-<script src="../../paperassets/js/jquery.datatables.js"></script>
-<!--  Full Calendar Plugin    -->
-<script src="../../paperassets/js/fullcalendar.min.js"></script>
-<!-- Paper Dashboard PRO Core javascript and methods for Demo purpose -->
-<script src="../../paperassets/js/paper-dashboard.js"></script>
-<!-- Paper Dashboard PRO DEMO methods, don't include it in your project! -->
-<script src="../../paperassets/js/demo.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        demo.initOverviewDashboard();
-        demo.initCirclePercentage();
 
-    });
-</script>
-
-<script src="~/lib/jquery/dist/jquery.flowchart.js"></script>
-<script src="~/js/customflowchart.js"></script>
-<script src="~/js/bootstrap.js" type="text/javascript"></script>
-<script src="~/js/terminalscript.js" type="text/javascript"></script>
-<script src="~/js/TransformationFilter.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js" type="text/javascript"></script>
+</html>

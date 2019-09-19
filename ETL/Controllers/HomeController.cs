@@ -749,7 +749,12 @@ namespace ETL.Controllers
             //model.SourceName holds current selected 'aggregator' name
             foreach (var inputModel in _dataModel.AggregatorDictionary[model.SourceName].InputModel)
             {
-                _dataModel.AggregatorDictionary[model.SourceName].InputModel[counter].OutputFlag = false;
+                _dataModel.AggregatorDictionary[model.SourceName].InputModel[counter].GroupByFlag =
+                    _dataModel.AggregatorDictionary[model.SourceName].InputModel[counter].CountFlag =
+                    _dataModel.AggregatorDictionary[model.SourceName].InputModel[counter].SumFlag =
+                    _dataModel.AggregatorDictionary[model.SourceName].InputModel[counter].MaxFlag =
+                    _dataModel.AggregatorDictionary[model.SourceName].InputModel[counter].MinFlag =
+                    _dataModel.AggregatorDictionary[model.SourceName].InputModel[counter].AvgFlag = false;
                 counter++;
             }
 
@@ -759,12 +764,36 @@ namespace ETL.Controllers
                 {
                     foreach (var inputModel in _dataModel.AggregatorDictionary[model.SourceName].InputModel)
                     {
-                        if (inputModel.ColumnId.Equals(id))
+                        var arrSelId = id.Split('-');
+                        int index = Convert.ToInt32(arrSelId[1]);
+                        var arrColumnId = inputModel.ColumnId.Split('-');
+
+                        if (arrSelId[1].Equals(arrColumnId[1]))
                         {
-                            var index = id.Substring(id.IndexOf('-') + 1);
-                            inputModel.OutputFlag = true;
-                            var x = _dataModel.AggregatorDictionary[model.SourceName].InputModel[Convert.ToInt32(index)] =
-                                inputModel;
+                            if (id.Contains("Group"))
+                            {
+                                _dataModel.AggregatorDictionary[model.SourceName].InputModel[Convert.ToInt32(index)].GroupByFlag = true;
+                            }
+                            else if (id.Contains("Count"))
+                            {
+                                _dataModel.AggregatorDictionary[model.SourceName].InputModel[Convert.ToInt32(index)].CountFlag = true;
+                            }
+                            else if (id.Contains("Sum"))
+                            {
+                                _dataModel.AggregatorDictionary[model.SourceName].InputModel[Convert.ToInt32(index)].SumFlag = true;
+                            }
+                            else if (id.Contains("Max"))
+                            {
+                                _dataModel.AggregatorDictionary[model.SourceName].InputModel[Convert.ToInt32(index)].MaxFlag = true;
+                            }
+                            else if (id.Contains("Min"))
+                            {
+                                _dataModel.AggregatorDictionary[model.SourceName].InputModel[Convert.ToInt32(index)].MinFlag = true;
+                            }
+                            else if (id.Contains("Avg"))
+                            {
+                                _dataModel.AggregatorDictionary[model.SourceName].InputModel[Convert.ToInt32(index)].AvgFlag = true;
+                            }
                             break;
                         }
                     }
@@ -1017,15 +1046,18 @@ namespace ETL.Controllers
                     {
                         if (inputModel.OutputFlag)
                         {
+                            inputModel.GroupByFlag = inputModel.CountFlag = inputModel.MinFlag = inputModel.MaxFlag =
+                                inputModel.SumFlag = inputModel.AvgFlag = false;
                             aggregatorModel.InputModel.Add(inputModel.Clone());
                         }
-                        else
-                        {
-                            var input = inputModel;
-                            input.OutputFlag = false;
+                        //Draw only the selected source fields
+                        //else
+                        //{
+                        //    var input = inputModel;
+                        //    input.OutputFlag = false;
 
-                            aggregatorModel.InputModel.Add(input.Clone());
-                        }
+                        //    aggregatorModel.InputModel.Add(input.Clone());
+                        //}
                     }
                     _dataModel.AggregatorDictionary[toContainer] = aggregatorModel;
                 }

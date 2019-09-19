@@ -160,6 +160,7 @@ function myPromiseDelJoiner(x, sec) {
         }, sec * 200);
     });
 }
+
 function myPromiseDelFilter(x, sec) {
     return new Promise(resolve => {
         var filterElements = document.querySelectorAll('[id^="filter_"]');
@@ -176,6 +177,7 @@ function myPromiseDelFilter(x, sec) {
         }, sec * 200);
     });
 }
+
 function myPromiseDelTrans(x, sec) {
     return new Promise(resolve => {
         var expressionElements = document.querySelectorAll('[id^="expression_"]');
@@ -191,6 +193,7 @@ function myPromiseDelTrans(x, sec) {
         }, sec * 200);
     });
 }
+
 function myPromiseDelLinks(x, sec) {
     return new Promise(resolve => {
         var links = document.getElementsByClassName("flowchart-link");
@@ -206,6 +209,7 @@ function myPromiseDelLinks(x, sec) {
         }, sec * 200);
     });
 }
+
 function myPromiseload(x, sec, data) {
     return new Promise(resolve => {
         var i, j, r = [], ii, p, t, s;
@@ -564,6 +568,7 @@ function myPromiseload(x, sec, data) {
         }, sec * 200);
     });
 }
+
 async function SerialFlow(data) {
 
     let result1 = await myPromiseDelSrc(1, 1);
@@ -824,166 +829,8 @@ $('#create_source').click(function () {
 //----------------Source Model code-----------
 
 //----------------Aggregator Model code-----------
-$('#agrModelForm').on('click', function () {
-    //AggregatorSaveChanges
-    var x = $('#AgrOutputFlags').val();
-    var model = {
-        //ConnectionName: $('#connectionList').val(),
-        SourceOutputFlags: $('#AgrOutputFlags').val(),
-        //TableName: $('#sourceTableList').val(),
-        SourceName: activeContainerId
-
-    }
-
-    $.ajax({
-        url: "Home/AggregatorSaveChanges",
-        type: "Post",
-        dataType: "json",
-        contentType: "application/json",
-        data: JSON.stringify(model), //if you need to post Model data, use this
-        success: function (result) {
-            $("#partial").html(result);
-        }
-    });
-});
-function aggregatorSettings(activeContainerId) {
-    $.getJSON('/home/AggregatorSettings', { containerId: activeContainerId }, function (data) {
-        var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
-        var sourceModel = jsonData.SourceModel;
-        var inputModel = jsonData.InputModel;
-        var isChecked = '';
-        $('#aggregator-table-name').empty();
-        $('#aggregator-table-name').text(sourceModel.ConnectionName + ' -> ' + sourceModel.TableName);
-
-        $('#aggregator-table-body').empty();
-        var trHTML = '';
-        var names = [];
-        for (var i = 0; i < inputModel.length; i++) //The json object has lenght
-        {
-            //isChecked = ' value = "false" disabled="disabled"';
-            isChecked = ' value = "false"';
-            if (inputModel[i].OutputFlag === true) {
-                isChecked = ' value = "true" checked="checked" ';
-
-            }
-            trHTML += '<tr>' + '<td >' +
-                inputModel[i].ColumnName +
-                '</td>' +
-                '<td > <div class="custom-control custom-checkbox"> ' +
-                '<input type="checkbox" class="checkbox" ' + isChecked + ' id = "' +
-                inputModel[i].ColumnId +
-                '"  data-id = "' +
-                inputModel[i].ColumnId +
-                '" >'
-            ' </tr>';
-            /*<!-- outCol = '<td >' +
-                inputModel[i].ColumnName +
-                '</td>' +
-                '<td > <div class="custom-control custom-checkbox"> ' +
-                '<input type="checkbox" class="checkbox" ' + isChecked + ' id = "' +
-                inputModel[i].ColumnId +
-                '"  data-id = "' +
-                inputModel[i].ColumnId +
-                '" >';
-            names.push(outCol);
-            outCol = ''; */
-
-        }
-        /*for (var i = 0, j = 0; i < sourceModel.InputModel.length; i++ , j++) //The json object has lenght
-        {
-            isChecked = ' value = "false"';
-            if (sourceModel.InputModel[i].OutputFlag === true) {
-                isChecked = ' value = "true" checked="checked" ';
-            }
-            if (!j < names.length) {
-                outCol = '';
-            }
-            trHTML += '<tr>' +
-                '<td>' +
-                sourceModel.InputModel[i].ColumnName +
-                '</td>' +
-                '<td> <div class="custom-control custom-checkbox"> ' +
-                '<input type="checkbox" class="checkbox " disabled ' + isChecked + ' >' +
-                '</div> </td> ' + names[j] + ' </tr>';
-        }*/
-        $('#aggregator-table-body').append(trHTML);
 
 
-    }).fail(function (jqXHR, textStatus, errorThrown) {
-        alert('Error getting aggregation settings!');
-    });
-}
-
-//---------------Aggregator Checkbox Handling--------------
-$('#aggregator-table').on('change',
-    'input[type="checkbox"]',
-    function (e) {
-        var chkVal = $(this).prop('value');
-        //find("[data-id= 0]").prop('value');
-        if (chkVal === 'true') {
-            $(this).prop('value', 'false').removeAttr('checked');
-        } else {
-            $(this).prop('value', 'true').prop('checked', 'checked');
-            //$('#sourceTable').find("[data-id= 0]").prop('value', 'true').prop('checked', 'checked');
-        }
-        updateAggregatorOutputFlag();
-    });
-
-function updateAggregatorOutputFlag() {
-    var checkAggregatorIds = [];
-    $('#aggregator-table input[type="checkbox"]').each(function (idx, val) {
-        if ($('#myCheckbox').is(':disabled')) {
-
-        }
-        else if ($(this).prop('checked')) {
-            checkAggregatorIds.push($(this).data('id'));
-        }
-    });
-
-    $('#AgrOutputFlags').val(checkAggregatorIds);
-
-}
-
-//---------------Aggregator Checkbox Handling--------------
-$('#create_aggregator').click(function () {
-    $.getJSON('/home/GetProjectMappingDetail',
-        {},
-        function (data) {
-            var jsonData = jQuery.parseJSON(JSON.stringify(data)); //This converts the string to json
-            if (jsonData.Project == -1 && jsonData.Mapping == -1) {
-                alert('Please select a Project/ Mapping');
-            }
-            else {
-                var operatorId = 'aggregator_' + aggregator_operatorI;
-                var operatorData = {
-                    top: 60,
-                    left: 500,
-                    opId: operatorId,
-                    properties: {
-                        title: 'aggregator',
-                        inputs: {
-                            input_1: {
-                                label: 'Input 1',
-                            }
-                        },
-                        outputs: {
-                            output_1: {
-                                label: 'Output 1',
-                            }
-                        }
-                    }
-                };
-
-                aggregator_operatorI++;
-
-                $('#example').flowchart('createOperator', operatorId, operatorData);
-                var source = "aggregator";
-                //alert(source + ' - ' + operatorId);
-                updateContainerVal(source, operatorId);
-                Logs(operatorId + " is created <br />");
-            }
-        });
-});
 
 //----------------Aggregator Model code-----------
 

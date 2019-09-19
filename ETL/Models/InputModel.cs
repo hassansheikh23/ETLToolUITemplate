@@ -13,6 +13,11 @@ namespace ETL.Models
         public bool InputFlag { get; set; }
         public bool OutputFlag { get; set; }
         public bool GroupByFlag { get; set; }
+        public bool CountFlag { get; set; }
+        public bool SumFlag { get; set; }
+        public bool MaxFlag { get; set; }
+        public bool MinFlag { get; set; }
+        public bool AvgFlag { get; set; }
         public string toDataType { get; set; }
 
         public InputModel Clone()
