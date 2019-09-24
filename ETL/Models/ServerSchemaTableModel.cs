@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 namespace ETL.Models
 {
     [Serializable]
-    public class ConnectionSettings
+    public class ServerSchemaTableModel
     {
-        public ConnectionSettings()
+        public ServerSchemaTableModel()
         {
             ConnectionName = "";
             TableNames = new List<string>();

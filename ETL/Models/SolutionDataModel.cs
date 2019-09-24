@@ -13,6 +13,7 @@ namespace ETL.Models
         public int selected_mapping { get; set; }
 
         //--------Data base Connection
+        public SqlServerConnectionModel SqlServerConnectionModel { get; set; }
         private string connectionString;
         private string current_mode;
         //--------Data base Connection
