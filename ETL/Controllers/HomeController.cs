@@ -37,38 +37,50 @@ namespace ETL.Controllers
             object obj = new
             {
                 SourceModel = src,
-                Connection = _dataModel.ConnectionNames
+                Connection = GetServerSchema() //_dataModel.ConnectionNames
             };
 
             return JsonConvert.SerializeObject(obj);
         }
-
+        
         public string GetTable(string connName)
         {
-            //connName = @"SQL Server (StudentDb)";
-            if (_dataModel.TableList.ContainsKey(connName))
+            string x = connName.Substring(connName.IndexOf("...") + 2);
+
+            var obj = connName.Split("...");
+            SqlServerConnectionModel model = GetServerConnection(new SqlServerConnectionModel
             {
-                var tableList = _dataModel.TableList[connName];
-                //get table list link with 'connName' 
+                ServerName = obj[0],
+                DbName = obj[1]
+            });
+            var res = GetServerSchemaTableName(model);
+            return JsonConvert.SerializeObject(res.TableNames);
+            //connName = @"SQL Server (StudentDb)";
 
-                return JsonConvert.SerializeObject(tableList);
-            }
+            //if (_dataModel.TableList.ContainsKey(connName))
+            //{
+            //    var tableList = _dataModel.TableList[connName];
+            //    //get table list link with 'connName' 
 
-            return JsonConvert.SerializeObject(null);
+            //    return JsonConvert.SerializeObject(tableList);
+            //}
+
+            //return JsonConvert.SerializeObject(null);
         }
 
         [HttpGet]
         public string GetTableHeader(string connName, string tableName, string containerId)
         {
             var dm = new DataModel();
-            if (connName.ToLower().Contains("SqlServer".ToLower()))
-            {
-                dm = SqlServerDataSource(connName, tableName);
-            }
-            else if (connName.ToLower().Contains("Excel".ToLower()))
-            {
-                dm = ExcelDataSource(connName, tableName);
-            }
+            dm = SqlServerDataSource(connName, tableName);
+            //if (connName.ToLower().Contains("SqlServer".ToLower()))
+            //{
+            //    dm = SqlServerDataSource(connName, tableName);
+            //}
+            //else if (connName.ToLower().Contains("Excel".ToLower()))
+            //{
+            //    dm = ExcelDataSource(connName, tableName);
+            //}
 
             //set Table Header in SourceModel
             //--Now
@@ -332,7 +344,8 @@ namespace ETL.Controllers
                     }
                 }
                 //generate Sql Server Query
-                string dbName = source.ConnectionName.Substring(source.ConnectionName.IndexOf('-'));
+                var obj = source.ConnectionName.Split("...");
+                string dbName = obj[1];
                 string tableName = source.TableName;
                 if (dbName != "" && tableName != "")
                 {
@@ -425,7 +438,8 @@ namespace ETL.Controllers
                 }
                 if (targetModel != null)
                 {
-                    string dbName = source.ConnectionName.Substring(source.ConnectionName.IndexOf('-'));
+                    var obj = source.ConnectionName.Split("...");
+                    string dbName = obj[1];
                     string tableName = source.TableName;
                     queryParam[0] = getTablePrefix(tableName);
                     queryParam[1] = queryParam[2] = "";
@@ -469,7 +483,7 @@ namespace ETL.Controllers
                     }
                     string createTableQuery = "";
                     strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
-                    createTableQuery += "CREATE TABLE " + dbName.Substring(1) + ".[dbo]." + strTable + "(";
+                    createTableQuery += "CREATE TABLE " + dbName + ".[dbo]." + strTable + "(";
                     createTableQuery += tableName + "_Id int IDENTITY(1,1) NOT NULL,";
                     string temp = "";
                     foreach (var item in columnList)
@@ -481,7 +495,7 @@ namespace ETL.Controllers
                     //queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
                     var s = String.Join(",", columnList);
                     //sqlQuery = "Create View " + tableName + _SolutionModel.ToJulianDate(DateTime.Now) + " AS SELECT * FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0] + " WHERE " + queryParam[2];
-                    string str = "INSERT INTO " + dbName.Substring(1) + ".[dbo]." + strTable + "(" + s + ") ";
+                    string str = "INSERT INTO " + dbName + ".[dbo]." + strTable + "(" + s + ") ";
                     string sqlQuery = str + " SELECT * FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0] + " WHERE " + queryParam[2];
                     string connetionString = _SolutionModel.getConnectionString();
                     //@"Data Source=desktop-ig62959\PCUSER;Initial Catalog=ETLTest;Integrated Security=True";
@@ -529,7 +543,8 @@ namespace ETL.Controllers
                 }
                 if (targetModel != null)
                 {
-                    string dbName = source.ConnectionName.Substring(source.ConnectionName.IndexOf('-'));
+                    var obj = source.ConnectionName.Split("...");
+                    string dbName = obj[1];
                     string tableName = source.TableName;
                     queryParam[0] = getTablePrefix(tableName);
                     queryParam[1] = queryParam[2] = "";
@@ -566,7 +581,7 @@ namespace ETL.Controllers
 
                     string createTableQuery = "";
                     strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
-                    createTableQuery += "CREATE TABLE " + dbName.Substring(1) + ".[dbo]." + strTable + "(";
+                    createTableQuery += "CREATE TABLE " + dbName + ".[dbo]." + strTable + "(";
                     createTableQuery += tableName + "_Id int IDENTITY(1,1) NOT NULL,";
                     string temp = "";
                     foreach (var item in columnList)
@@ -577,7 +592,7 @@ namespace ETL.Controllers
                     createTableQuery += temp + ")";
                     var columnListSelect = String.Join(",", columnList);
                     string str = "INSERT INTO " + dbName.Substring(1) + ".[dbo]." + strTable + "(" + columnListSelect + ") ";
-                    string sqlQuery = str + "SELECT " + queryParam[2] + " FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0];
+                    string sqlQuery = str + "SELECT " + queryParam[2] + " FROM " + dbName + ".[dbo]." + tableName + " " + queryParam[0];
                     //sqlQuery = "SELECT " + queryParam[2] + " FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0];
                     string connetionString = _SolutionModel.getConnectionString();
                     SqlConnection connection = new SqlConnection(connetionString);
@@ -624,36 +639,84 @@ namespace ETL.Controllers
                 if (targetModel != null)
                 {
                     string dbName = source.ConnectionName.Substring(source.ConnectionName.IndexOf('-'));
+                    var obj = source.ConnectionName.Split("...");
+                    dbName = obj[1];
                     string tableName = source.TableName;
                     queryParam[0] = getTablePrefix(tableName);
                     queryParam[1] = queryParam[2] = "";
                     var columnList = new List<string>();
+                    var columnListGroup = new List<string>();
+                    var columnListCount = new List<string>();
+                    var columnListAvg = new List<string>();
+                    var columnListMax = new List<string>();
+                    var columnListMin = new List<string>();
+                    var columnListSum = new List<string>();
                     queryParam[3] = columnList;
 
                     foreach (var item in aggregatorModel.InputModel)
                     {
-                        if (item.OutputFlag)
+                        if (item.GroupByFlag)
                         {
                             queryParam[2] += queryParam[0] + "." + item.ColumnName + ",";
-                            columnList.Add(item.ColumnName);
+                            columnListGroup.Add(queryParam[0] + "." + item.ColumnName);
+                            columnList.Add(queryParam[0] + "_" + item.ColumnName );
+                        }
+                        if (item.CountFlag)
+                        {
+                            queryParam[2] += "COUNT(" + queryParam[0] + "." + item.ColumnName + ") AS COUNT_" + queryParam[0] + "_" + item.ColumnName +  ",";
+                            columnList.Add("COUNT_" + queryParam[0] + "_" + item.ColumnName);
+
+                            //columnListCount.Add(item.ColumnName);
+                        }
+                        if (item.SumFlag)
+                        {
+                            queryParam[2] += "SUM(" + queryParam[0] + "." + item.ColumnName + ") AS SUM_" + queryParam[0] + "_" + item.ColumnName + ",";
+                            columnList.Add("SUM_" + queryParam[0] + "_" + item.ColumnName);
+                            //columnListSum.Add(item.ColumnName);
+                        }
+                        if (item.MaxFlag)
+                        {
+                            queryParam[2] += "MAX(" + queryParam[0] + "." + item.ColumnName + ") AS MAX_" + queryParam[0] + "_" + item.ColumnName + ",";
+                            columnList.Add("MAX_" + queryParam[0] + "_" + item.ColumnName);
+                            //columnListMax.Add(item.ColumnName);
+                        }
+                        if (item.MinFlag)
+                        {
+                            queryParam[2] += "MIN(" + queryParam[0] + "." + item.ColumnName + ") AS MIN_" + queryParam[0] + "_" + item.ColumnName + ",";
+                            columnList.Add("MIN_" + queryParam[0] + "_" + item.ColumnName);
+                            //columnListMin.Add(item.ColumnName);
+                        }
+                        if (item.AvgFlag)
+                        {
+                            queryParam[2] += "AVG(" + queryParam[0] + "." + item.ColumnName + ") AS AVG_" + queryParam[0] + "_" + item.ColumnName + ",";
+                            columnList.Add("AVG_" + queryParam[0] + "_" + item.ColumnName);
+                            //columnListAvg.Add(item.ColumnName);
                         }
                     }
                     queryParam[2] = queryParam[2].ToString().Substring(0, queryParam[2].ToString().Length - 1);
+                    
 
                     string createTableQuery = "";
                     strTable = tableName + _SolutionModel.ToJulianDate(DateTime.Now);
-                    createTableQuery += "CREATE TABLE " + dbName.Substring(1) + ".[dbo]." + strTable + "(";
+                    createTableQuery += "CREATE TABLE " + dbName + ".[dbo]." + strTable + "(";
                     createTableQuery += tableName + "_Id int IDENTITY(1,1) NOT NULL,";
                     string temp = "";
+                    //var colList = queryParam[2].ToString().Split(',').ToList<string>();
                     foreach (var item in columnList)
                     {
-                        temp += item + " varchar(100) NULL" + " ,";
+                        string x = item;
+                        if (x.Contains('.'))
+                        {
+                            x = x.Replace('.', '_');
+                        }
+                        temp += x + " varchar(100) NULL" + " ,";
                     }
                     temp = temp.Substring(0, temp.Length - 1);
                     createTableQuery += temp + ")";
                     var columnListSelect = String.Join(",", columnList);
-                    string str = "INSERT INTO " + dbName.Substring(1) + ".[dbo]." + strTable + "(" + columnListSelect + ") ";
-                    string sqlQuery = str + " SELECT " + queryParam[2] + " FROM " + dbName.Substring(1) + ".[dbo]." + tableName + " " + queryParam[0] + " GROUP BY " + queryParam[2];
+                    string columnGroupBy = String.Join(",", columnListGroup);
+                    string str = "INSERT INTO " + dbName + ".[dbo]." + strTable + "(" + columnListSelect + ") ";
+                    string sqlQuery = str + " SELECT " + queryParam[2] + " FROM " + dbName + ".[dbo]." + tableName + " " + queryParam[0] + " GROUP BY " + columnGroupBy;
                     //sqlQuery = "SELECT " + queryParam[2] + " FROM [dbo]." + tableName + " " + queryParam[0] + " GROUP BY " + queryParam[2];
                     string connetionString = _SolutionModel.getConnectionString();
                     SqlConnection connection = new SqlConnection(connetionString);
@@ -734,7 +797,6 @@ namespace ETL.Controllers
         {
 
             var agrModel = _dataModel.AggregatorDictionary[containerId];
-
             return JsonConvert.SerializeObject(agrModel);
         }
 
@@ -888,11 +950,11 @@ namespace ETL.Controllers
             }
 
             var dataModel = ReadDataModel();
-            if (!_dataModel.ConnectionNames.Contains(dataModel.ConnectionSettingModel.ConnectionName))
+            if (!_dataModel.ConnectionNames.Contains(dataModel.ServerSchemaTableModel.ConnectionName))
             {
-                _dataModel.ConnectionNames.Add(dataModel.ConnectionSettingModel.ConnectionName);
-                _dataModel.TableList.Add(dataModel.ConnectionSettingModel.ConnectionName, dataModel.ConnectionSettingModel.TableNames);
-                //.TableNames = dataModel.ConnectionSettings.TableNames;
+                _dataModel.ConnectionNames.Add(dataModel.ServerSchemaTableModel.ConnectionName);
+                _dataModel.TableList.Add(dataModel.ServerSchemaTableModel.ConnectionName, dataModel.ServerSchemaTableModel.TableNames);
+                //.TableNames = dataModel.ServerSchemaTableModel.TableNames;
                 //_dataModel.InputModel = dataModel.InputModel;
             }
             return JsonConvert.SerializeObject(null);
@@ -1678,11 +1740,11 @@ namespace ETL.Controllers
         [HttpPost]
         public IActionResult ExcelConnection(DataModel model)
         {
-            var retModel = ExcelSheetNames(""); //set connectionName and Table Names in ConnectionSettings
-            if (!_dataModel.ConnectionNames.Contains(retModel.ConnectionSettingModel.ConnectionName))
+            var retModel = ExcelSheetNames(""); //set connectionName and Table Names in ServerSchemaTableModel
+            if (!_dataModel.ConnectionNames.Contains(retModel.ServerSchemaTableModel.ConnectionName))
             {
-                _dataModel.ConnectionNames.Add(retModel.ConnectionSettingModel.ConnectionName);
-                _dataModel.TableList.Add(retModel.ConnectionSettingModel.ConnectionName, retModel.ConnectionSettingModel.TableNames);
+                _dataModel.ConnectionNames.Add(retModel.ServerSchemaTableModel.ConnectionName);
+                _dataModel.TableList.Add(retModel.ServerSchemaTableModel.ConnectionName, retModel.ServerSchemaTableModel.TableNames);
                 _dataModel.DbConnection = retModel.DbConnection;
             }
             else
@@ -1736,11 +1798,11 @@ namespace ETL.Controllers
                 //get the first worksheet in the workbook
                 foreach (var worksheet in package.Workbook.Worksheets)
                 {
-                    dataModel.ConnectionSettingModel.TableNames.Add(worksheet.Name);
+                    dataModel.ServerSchemaTableModel.TableNames.Add(worksheet.Name);
                 }
                 dataModel.DbConnection.msg = "File processed";
-                dataModel.ConnectionSettingModel.ConnectionName = @"Excel-" + basePath;
-                //dataModel.ConnectionSettings.ConnectionName = @"SQL Server (StudentDb)";
+                dataModel.ServerSchemaTableModel.ConnectionName = @"Excel-" + basePath;
+                //dataModel.ServerSchemaTableModel.ConnectionName = @"SQL Server (StudentDb)";
 
             }
 
@@ -1750,11 +1812,18 @@ namespace ETL.Controllers
         private DataModel SqlServerDataSource(string dbName, string tableName)
         {
             var dataModel = new DataModel();
-            string completeDbName = dbName;
-            int loc = dbName.IndexOf('-') + 1;
-            int length = dbName.Length - loc;
-            dbName = dbName.Substring(loc);
-            string connetionString = _dataModel.ConnectionString[completeDbName];
+            //string completeDbName = dbName;
+            //int loc = dbName.IndexOf('-') + 1;
+            //int length = dbName.Length - loc;
+            //dbName = dbName.Substring(loc);
+            var obj = dbName.Split("...");
+            SqlServerConnectionModel model = GetServerConnection(new SqlServerConnectionModel
+            {
+                ServerName = obj[0],
+                DbName = obj[1]
+            });
+            //string connetionString = _dataModel.ConnectionString[completeDbName];
+            string connetionString = GetConnectionStringFromParams(model);
             //@"Data Source=desktop-ig62959\PCUSER;Initial Catalog=ETLTest;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connetionString);
             connection.Open();
@@ -1762,7 +1831,7 @@ namespace ETL.Controllers
             {
 
                 string tableColumnsQuery =
-                    "SELECT COLUMN_NAME FROM " + dbName + ".INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '" + tableName + "'";
+                    "SELECT COLUMN_NAME FROM " + model.DbName + ".INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '" + tableName + "'";
                 //"SELECT COLUMN_NAME FROM " + dbName + ".INFORMATION_SCHEMA.COLUMNS WHERE TABLENAME = '" + tableName + "'" ;
                 SqlCommand sqlCommand = new SqlCommand(tableColumnsQuery, connection);
                 SqlDataReader reader = sqlCommand.ExecuteReader();
@@ -1883,36 +1952,75 @@ namespace ETL.Controllers
 
             return task1.Result;
         }
-
-        public async Task<string> SqlServerConnectionAsync(SqlServerConnectionModel model)
+        //private string getTableNameWithSchemaInfo(SqlServerConnectionModel model)
+        //{
+        //    string table = model.DbName + ".dbo." + model.Tab
+        //}
+        private bool GetServerConnection(int recId)
         {
-            DataModel dataModel = new DataModel();
-            string connetionString = "";
-            string dbName = "";
-            if (model.ServerName != "" && model.DbName != "" && model.UserName != "" && model.Password != "")
+            return true;
+        }
+
+        private SqlServerConnectionModel GetServerConnection(SqlServerConnectionModel model)
+        {
+            SqlServerConnectionModel retModel = new SqlServerConnectionModel();
+            string connetionString = _SolutionModel.getConnectionString();
+            SqlConnection connection = new SqlConnection(connetionString);
+            try
+            {
+                connection.Open();
+                if (connection != null && connection.State == ConnectionState.Open)
+                {
+                    string dbTableQuery = "SELECT TOP 1 * FROM ETL.DBO.TBL_DATABASE_SOURCES D" +
+                        " WHERE D.SERVERNAME = '" + model.ServerName + "' AND D.SchemaName = '" + model.DbName +"'";
+                    SqlCommand sqlCommand = new SqlCommand(dbTableQuery, connection);
+                    sqlCommand.CommandTimeout = 300;
+                    SqlDataReader reader = sqlCommand.ExecuteReader();
+                    try
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader["ServerName"] != null && reader["SchemaName"] != null && reader["DbUserName"] != null && reader["DbUserPassword"] != null)
+                            {
+                                retModel.ServerName = reader["ServerName"].ToString();
+                                retModel.DbName = reader["SchemaName"].ToString();
+                                retModel.UserName = reader["DbUserName"].ToString();
+                                retModel.Password = reader["DbUserPassword"].ToString();
+                                break;
+                            }
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                    }
+                    finally
+                    {
+                        // Always call Close when done reading.
+                        reader.Close();
+                    } // reader 
+                }
+                else
+                {
+                }
+            }
+            catch (Exception e)
             {
 
-                connetionString = "Server=" + @model.ServerName + ";Initial Catalog=" + model.DbName +
-                                    ";Persist Security Info=False;User ID = " + @model.UserName + ";Password=" + model.Password +
-                                    ";MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate = True; Connection Timeout = 30;";
-                //";Persist Security Info=False;User ID = " + model.UserName + ";Password=" + model.Password +
-                //";MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate = True; Connection Timeout = 30;";
-
-                //connetionString = @"Data Source=desktop-ig62959\PCUSER;Initial Catalog=ETLTest;Integrated Security=True";
-                /*"Server=" + model.ServerName + ";Initial Catalog=" + model.DbName +
-                                "Integrated Security=True";*/
-                dbName = model.DbName;
-                /*
-                Server=tcp:etldemo1.database.windows.net,1433;Initial Catalog=etl;Persist Security Info=False;
-                User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;
-                TrustServerCertificate=False;Connection Timeout=30;        
-                */
             }
-            else
+            finally
             {
-                connetionString = _SolutionModel.getConnectionString();
+                connection.Close();
             }
-            //set it to dynamic
+            return retModel;
+        }
+        private bool SaveServerConnection(SqlServerConnectionModel model)
+        {
+            //active server connection
+            string connetionString = _SolutionModel.getConnectionString();
+            
+
+            
+
 
             SqlConnection connection = new SqlConnection(connetionString);
             try
@@ -1920,60 +2028,205 @@ namespace ETL.Controllers
                 connection.Open();
                 if (connection != null && connection.State == ConnectionState.Open)
                 {
+                    var currentServer = _SolutionModel.SqlServerConnectionModel;
+                    string strQuery = @"Insert into " + "etl" +
+                        " .dbo.tbl_database_sources(ServerName, SchemaName, DbUserName,DbUserPassword,DbConnectionString)" +
+                        " Values(@ServerName, @SchemaName, @DbUserName, @DbUserPassword, @DbConnectionString);";
+                    
+                    SqlCommand sqlCommand = new SqlCommand(strQuery, connection);
+                    //sqlCommand.Parameters.Add(new SqlParameter("@ServerName",));
+                    sqlCommand.Parameters.Add(new SqlParameter("@ServerName", model.ServerName));
+                    //sqlCommand.Parameters.Add("@ServerName", SqlDbType.NVarChar);
+                    //sqlCommand.Parameters["@ServerName"].Value = model.ServerName;
+                    sqlCommand.Parameters.Add("@SchemaName", SqlDbType.NVarChar);
+                    sqlCommand.Parameters["@SchemaName"].Value = model.DbName;
+                    sqlCommand.Parameters.Add("@DbUserName", SqlDbType.NVarChar);
+                    sqlCommand.Parameters["@DbUserName"].Value = model.UserName;
+                    sqlCommand.Parameters.Add("@DbUserPassword", SqlDbType.NVarChar);
+                    sqlCommand.Parameters["@DbUserPassword"].Value = model.Password;
+                    sqlCommand.Parameters.Add("@DbConnectionString", SqlDbType.NVarChar);
+                    sqlCommand.Parameters["@DbConnectionString"].Value = "";
 
-                    string dbTableQuery = "SELECT * FROM " + dbName + ".INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'";
+                    int ret = sqlCommand.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                //Log
+                return false;
+            }
+            finally
+            {
+                // Always call Close when done reading.
+                //reader.Close();
+                connection.Close();
+            }
+            return true;
+        }
+        private string GetConnectionStringFromParams(SqlServerConnectionModel model)
+        {
+            string connectionString = "Server=" + @model.ServerName + ";Initial Catalog=" + model.DbName +
+                                    ";Persist Security Info=False;" +
+                                    ";MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate = True; Connection Timeout = 30;";
+            if (model.Password != "" && model.UserName != "")
+            {
+                connectionString += "User ID = " + @model.UserName + ";Password=" + model.Password;
+            }
+            return connectionString;
+        }
+       /// <summary>
+       /// Get Distinct Server Schema from App DB
+       /// </summary>
+       /// <returns></returns>
+        private List<string> GetServerSchema()
+        {
+            var resList = new List<string>();
+            string connetionString = _SolutionModel.getConnectionString();
+            SqlConnection connection = new SqlConnection(connetionString);
+            try
+            {
+                connection.Open();
+                if (connection != null && connection.State == ConnectionState.Open)
+                {
+                    string dbTableQuery = "select DISTINCT ServerName, SchemaName  from etl.dbo.tbl_database_sources ";
                     SqlCommand sqlCommand = new SqlCommand(dbTableQuery, connection);
                     sqlCommand.CommandTimeout = 300;
-                    SqlDataReader reader = await sqlCommand.ExecuteReaderAsync().ConfigureAwait(false);
-
-                    //dataModel.TableList.Add(dbName, new List<string>());
+                    SqlDataReader reader = sqlCommand.ExecuteReader();
+                    //sqlCommand.ExecuteReaderAsync().ConfigureAwait(false);
                     try
                     {
                         while (reader.Read())
                         {
-                            /*reader["TABLE_CATALOG"],
-                            reader["TABLE_SCHEMA"],
-                            reader["TABLE_TYPE"]*/
-                            //reader["TABLE_NAME"]
-                            if (reader["TABLE_NAME"] != null)
+                            if (reader["ServerName"] != null)
                             {
-                                dataModel.ConnectionSettingModel.TableNames.Add(reader["TABLE_NAME"].ToString());
+                                resList.Add(reader["ServerName"].ToString() + "..." + reader["SchemaName"].ToString());
                             }
                         }
                     }
                     catch (Exception e)
                     {
-
                     }
                     finally
                     {
                         // Always call Close when done reading.
-                        dataModel.ConnectionSettingModel.ConnectionName = "";
                         reader.Close();
-                    }
-                }
-                dataModel.DbConnection.msg = "File processed";
-                dataModel.ConnectionSettingModel.ConnectionName = @"SqlServer-" + dbName;
-                dataModel.ConnectionString.Add(@"SqlServer-" + dbName, connetionString);
-                var retModel = dataModel; //set connectionName and Table Names in ConnectionSettings
-                if (!_dataModel.ConnectionNames.Contains(retModel.ConnectionSettingModel.ConnectionName))
-                {
-                    _dataModel.ConnectionNames.Add(retModel.ConnectionSettingModel.ConnectionName);
-                    _dataModel.TableList.Add(retModel.ConnectionSettingModel.ConnectionName, retModel.ConnectionSettingModel.TableNames);
-                    _dataModel.ConnectionString.Add(@"SqlServer-" + dbName, connetionString);
-                    _dataModel.DbConnection = retModel.DbConnection; //File Processing Status
-                }
-                else
-                {
-                    Console.WriteLine(@"Connection Already Available");
+                    } // reader 
                 }
             }
             catch (Exception e)
             {
                 string ret = "Failure";
-                return JsonConvert.SerializeObject(ret);
+            }
+            return resList;
+        }
+        private ServerSchemaTableModel GetServerSchemaTableName(SqlServerConnectionModel model)
+        {
+            DataModel dataModel = new DataModel();
+            ServerSchemaTableModel objServerSchemaTableModel = new ServerSchemaTableModel();
+            string dbName = "";
+            string connetionString;
+            if (model.ServerName != "" && model.DbName != "" && model.UserName != "" && model.Password != "")
+            {
+                connetionString = GetConnectionStringFromParams(model);
+                dbName = model.DbName;
+                objServerSchemaTableModel.ConnectionName = model.ServerName + "..." + dbName;
+            }
+            else
+            {
+                //Failure Message
+                connetionString = _SolutionModel.getConnectionString();
             }
 
+            //set it to dynamic
+            SqlConnection connection = new SqlConnection(connetionString);
+            try
+            {
+                connection.Open();
+                if (connection != null && connection.State == ConnectionState.Open)
+                {
+                    string dbTableQuery = "SELECT * FROM " + dbName + ".INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'";
+                    SqlCommand sqlCommand = new SqlCommand(dbTableQuery, connection);
+                    sqlCommand.CommandTimeout = 300;
+                    SqlDataReader reader = sqlCommand.ExecuteReader(); 
+                    //sqlCommand.ExecuteReaderAsync().ConfigureAwait(false);
+                    try
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader["TABLE_NAME"] != null)
+                            {
+                                objServerSchemaTableModel.TableNames.Add(reader["TABLE_NAME"].ToString());
+                            }
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                    }
+                    finally
+                    {
+                        // Always call Close when done reading.
+                        reader.Close();
+                    } // reader 
+                }
+                //dataModel.DbConnection.msg = "File processed";
+                //var retModel = dataModel; //set connectionName and Table Names in ServerSchemaTableModel
+                //if (!_dataModel.ConnectionNames.Contains(retModel.ServerSchemaTableModel.ConnectionName))
+                //{
+                //    _dataModel.ConnectionNames.Add(retModel.ServerSchemaTableModel.ConnectionName);
+                //    _dataModel.TableList.Add(retModel.ServerSchemaTableModel.ConnectionName, retModel.ServerSchemaTableModel.TableNames);
+                //    _dataModel.ConnectionString.Add(@"SqlServer-" + dbName, connetionString);
+                //    _dataModel.DbConnection = retModel.DbConnection; //File Processing Status
+                //}
+                //else
+                //{
+                //    Console.WriteLine(@"Connection Already Available");
+                //}
+            }
+            catch (Exception e)
+            {
+                string ret = "Failure";
+                //return JsonConvert.SerializeObject(ret);
+            }
+            return objServerSchemaTableModel;
+        }
+        public async Task<string> SqlServerConnectionAsync(SqlServerConnectionModel model)
+        {
+            DataModel dataModel = new DataModel();
+            string connetionString = "";
+            string dbName = "";
+            if (model.ServerName != "" && model.DbName != "" && model.UserName != "" && model.Password != "")
+            {
+                //Check Connection is valid
+                string checkConnString = GetConnectionStringFromParams(model);
+                SqlConnection checkSqlConn = new SqlConnection(checkConnString);
+                try
+                {
+                    checkSqlConn.Open();
+                    //Check connection already exist
+                    var res = GetServerConnection(model);
+                    if (res.ServerName.Equals("") && res.DbName.Equals(""))
+                    {
+                        var saveRes = SaveServerConnection(model);
+                    }
+                }
+                catch (Exception e)
+                {
+                }
+                finally
+                {
+                    checkSqlConn.Close();
+                }
+                
+
+                //connetionString = "Server=" + @model.ServerName + ";Initial Catalog=" + model.DbName +
+                //                    ";Persist Security Info=False;User ID = " + @model.UserName + ";Password=" + model.Password +
+                //                    ";MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate = True; Connection Timeout = 30;";
+                //dbName = model.DbName;
+            }
+            else
+            {
+                connetionString = _SolutionModel.getConnectionString();
+            }
             return JsonConvert.SerializeObject("Success");
         }
         #endregion

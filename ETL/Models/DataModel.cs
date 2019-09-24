@@ -22,8 +22,8 @@ namespace ETL.Models
             ConnectionString = new Dictionary<string, string>();
 
             ////InputModel = new List<InputModel>();
-            ////ExcelDataModelList = new List<ConnectionSettings>();
-            ConnectionSettingModel = new ConnectionSettings();
+            ////ExcelDataModelList = new List<ServerSchemaTableModel>();
+            ServerSchemaTableModel = new ServerSchemaTableModel();
             SourceModel = new SourceModel();
             SourceOutputFlags = "";
             Id = -1;
@@ -43,8 +43,8 @@ namespace ETL.Models
         public Dictionary<string, List<string>> TableList { get; set; }
 
         ////public List<InputModel> InputModel { get; set; }
-        ////public List<ConnectionSettings> ExcelDataModelList { get; set; }
-        public ConnectionSettings ConnectionSettingModel { get; set; } //temporary Usage
+        ////public List<ServerSchemaTableModel> ExcelDataModelList { get; set; }
+        public ServerSchemaTableModel ServerSchemaTableModel { get; set; } //temporary Usage
         public SourceModel SourceModel { get; set; } //temporary Usage
         public string SourceOutputFlags { get; set; } //temporary Usage
         public Dictionary<string, string> ConnectionString { get; set; }
